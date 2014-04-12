@@ -1,6 +1,14 @@
 <?php
 //SEE http://blog.evepanel.net/eve-online/static-data-dump/calculating-the-shortest-route-between-two-systems.html
 
+$dbinfo=array(
+    'database'=>'evesdd_crucible_11',
+    'user'=>'root',
+    'pass'=>'',
+    'host'=>'localhost',
+);
+include 'dbinfo.php';
+
 // We want to travel from Amarr
 $origin = 30002187;
 
@@ -26,8 +34,8 @@ $jumps = array();
 
 // Assuming a mysql conversion of the Static Data Dump
 // in the database evesdd
-$dbConnection = new PDO('mysql:dbname=evesdd;host=localhost', 'root', '');
-$result = $dbConnection->query('SELECT `fromSolarSystemID`, `toSolarSystemID` FROM `mapSolarSystemJumps`');
+$dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
+$result = $dbConnection->query('SELECT fromSolarSystemID, toSolarSystemID FROM mapsolarsystemjumps');
 
 foreach ($result as $row) {
     $from = (int) $row['fromSolarSystemID'];
@@ -38,7 +46,9 @@ foreach ($result as $row) {
     }
     $jumps[$from][] = $to;
 }
-
+echo '<br>Calculating Jumps<br>'
+. "var jumps='".json_encode($jumps)."';<br>";
+        
 
 // Start the fun
 if (isset($jumps[$origin]) && isset($jumps[$target])) {
@@ -54,7 +64,7 @@ if (isset($jumps[$origin]) && isset($jumps[$target])) {
         $jumpResult['jumps'] = $origin . ',' . $target;
         $jumpResult['distance'] = 1;
     }
-
+    
     // Lets start the fun
     else {
         // Will contain the system IDs
@@ -113,3 +123,4 @@ if (isset($jumps[$origin]) && isset($jumps[$target])) {
         }
     }
 }
+var_dump($jumpResult);

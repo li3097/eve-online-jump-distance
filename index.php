@@ -218,6 +218,7 @@
         <script type="text/javascript">
             
             <?php include 'jq.js' ?>
+            <?php include 'jumps.js' ?>
                 
             getFee = function(jumps) {
                 return (.5 + (.5 * jumps)) + ' mill ISK';
@@ -347,7 +348,6 @@
 <hr/>
 <form>
     <table style="margin-left: 20px;">
-        <!--
         <tr>
         <td>Start System&nbsp;</td>
         <td> <input type="text" name="s" id="s" class="text" value="Aldrat" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
@@ -358,7 +358,7 @@
         <td><input type="text" name="d" id="d" class="text" value="Jita" tabindex="2"></td>
         </tr>
         
-        -->
+        
         <tr>
             <td>Jumps</td>
             <td><input type="text" name="jumps" id="jumps" class="text" style="color:#888;" 

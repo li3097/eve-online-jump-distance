@@ -218,6 +218,45 @@
         <script type="text/javascript">
             
             <?php include 'jq.js' ?>
+                
+            getFee = function(jumps) {
+                return (.5 + (.5 * jumps)) + ' mill ISK';
+            };
+            showFee = function() {
+                var fee = getFee(document.getElementById('jumps').value);
+                document.getElementById('fee').value = fee;
+                document.getElementById('quote').innerHTML = ' (' + fee + ')';
+            };
+            if (typeof CCPEVE !== 'undefined') {
+                CCPEVE.requestTrust('http://really.ruok.org');
+                isIGB = true;
+            } else {
+                isIGB = false;
+                CCPEVE = {
+                    showInfo: function() {
+                        var win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
+                        win.focus();
+                    },
+                    joinChannel: function() {
+                        alert('please use in game browser to join channel');
+                    },
+                    createContract: function() {
+                        alert('please use in game browser to create contract');
+                    }
+                };
+            }
+            function inputFocus(i) {
+                if (i.value === i.defaultValue) {
+                    i.value = "";
+                    i.style.color = "white";
+                }
+            }
+            function inputBlur(i) {
+                if (i.value === "") {
+                    i.value = i.defaultValue;
+                    i.style.color = "white";
+                }
+            }
             $(document).ready(function()
             {
                 $("#d").autocomplete(systems,
@@ -269,46 +308,15 @@
                         return false;
                     }
                 });
+                $("body").delegate('#jumps','keyup',function(){
+                    showFee();
+                });
+                $("body").delegate('#jumps','change',function(){
+                    showFee();
+                });
+                
             });
 
-            getFee = function(jumps) {
-                return (.5 + (.5 * jumps)) + ' mill ISK';
-            }
-            showFee = function() {
-                var fee = getFee(document.getElementById('jumps').value);
-                document.getElementById('fee').value = fee;
-                document.getElementById('quote').innerHTML = ' (' + fee + ')';
-            }
-            if (typeof CCPEVE !== 'undefined') {
-                CCPEVE.requestTrust('http://really.ruok.org');
-                isIGB = true;
-            } else {
-                isIGB = false;
-                CCPEVE = {
-                    showInfo: function() {
-                        var win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
-                        win.focus();
-                    },
-                    joinChannel: function() {
-                        alert('please use in game browser to join channel');
-                    },
-                    createContract: function() {
-                        alert('please use in game browser to create contract');
-                    },
-                };
-            }
-            function inputFocus(i) {
-                if (i.value == i.defaultValue) {
-                    i.value = "";
-                    i.style.color = "white";
-                }
-            }
-            function inputBlur(i) {
-                if (i.value == "") {
-                    i.value = i.defaultValue;
-                    i.style.color = "white";
-                }
-            }
         </script>
     </head>
     <body>
@@ -359,13 +367,6 @@
         <tr>
             <td>Fee</td>
             <td><input style="color:white" type="text" id="fee" class="text" value="" disabled></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-                <button type="button" onClick="showFee();
-                        false;" tabindex="2">Calculate Fee</button>
-
         </tr>
     </table>
 </form>

@@ -15,6 +15,9 @@ $origin = 30002187;
 // To Jita
 $target = 30000142;
 
+//minimum security
+$minsec=.5;
+
 // This will hold the result of our calculation
 $jumpResult = array(
     'origin' => $origin,
@@ -35,7 +38,13 @@ $jumps = array();
 // Assuming a mysql conversion of the Static Data Dump
 // in the database evesdd
 $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
-$result = $dbConnection->query('SELECT fromSolarSystemID, toSolarSystemID FROM mapsolarsystemjumps');
+$result = $dbConnection->query("SELECT msj.fromSolarSystemID ,msj.toSolarSystemID#, s1.security as fromSec, s2.security as toSec
+FROM mapsolarsystemjumps as msj
+JOIN mapsolarsystems as s1 on msj.fromSolarSystemID=s1.solarSystemID
+JOIN mapsolarsystems as s2 on msj.fromSolarSystemID=s2.solarSystemID
+
+WHERE s1.security >= {$minsec}
+AND s2.security >= {$minsec}");
 
 foreach ($result as $row) {
     $from = (int) $row['fromSolarSystemID'];
@@ -47,7 +56,7 @@ foreach ($result as $row) {
     $jumps[$from][] = $to;
 }
 echo '<br>Calculating Jumps<br>'
-. "var jumps='".json_encode($jumps)."';<br>";
+. "var jumps='".json_encode($jumps)."';<br>";die;
         
 
 // Start the fun

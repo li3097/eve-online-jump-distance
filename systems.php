@@ -33,32 +33,12 @@ WHERE
     ss.security > {$minsec}");
 
 $systems=array();
-class dynObject {
-    public function __construct(array $arguments = array()) {
-        if (!empty($arguments)) {
-            foreach ($arguments as $property => $argument) {
-                $this->{$property} = $argument;
-            }
-        }
-    }
 
-    public function __call($method, $arguments) {
-        $arguments = array_merge(array("stdObject" => $this), $arguments); // Note: method argument 0 will always referred to the main class ($this).
-        if (isset($this->{$method}) && is_callable($this->{$method})) {
-            return call_user_func_array($this->{$method}, $arguments);
-        } else {
-            throw new Exception("Fatal error: Call to undefined method dynObject::{$method}()");
-        }
-    }
-}
 
 foreach ($systems_q as $row) {
     $system=new dynObject();
     $system->t=$row['system'];
-    
-    //{t:'Sarum Prime' , s:' (Domain <span class="s10">1.0</span>)'}
-    $system->s=' ('.$row['region'].' <span class="s'.($row['sec']*10).'">'.$row['sec'].'</span>)';
-    //echo   $system->s;
+    $system->s=' ('.$row['region']." <span class='s".str_replace('.', '', $row['sec'].'')."'>".$row['sec'].'</span>)';
     $system->i=$row['id'];
     $systems[]=$system;
 }

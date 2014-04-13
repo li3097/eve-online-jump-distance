@@ -39,7 +39,7 @@
                     document.getElementById('jumps').value = jumps;
                     var link = IGBrouteLink(path[0], path[path.length - 1]);
                     //document.getElementById('ccproute').innerHTML= link;
-                    console.log(path, link);
+                    //console.log(path, link);
                     showFee();
                 } catch (e) {
                     document.getElementById('jumps').value = '';
@@ -56,7 +56,7 @@
             IGBrouteLink = function(from, to) {
                 //return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
                 return '<a onClick="CCPEVE.showRouteTo(' + "'" + from + "::" + to + "');" + '">Show Route</a>';
-            }
+            };
 
             //---shims
             if (typeof CCPEVE !== 'undefined') {
@@ -95,19 +95,19 @@
                     i.style.color = "white";
                 }
             }
-            systemAutocompleteOpts = {
-                width: 300,
-                formatItem: function(item)
-                {
-                    return item.t + item.s;
-                },
-                formatResult: function(item)
-                {
-                    return item.t;
-                }
-            };
             $(document).ready(function()
             {
+                var systemAutocompleteOpts = {
+                    width: 300,
+                    formatItem: function(item)
+                    {
+                        return item.t + item.s;
+                    },
+                    formatResult: function(item)
+                    {
+                        return item.t;
+                    }
+                };
                 $("#d").autocomplete(systems, systemAutocompleteOpts);
                 $("#s").autocomplete(systems, systemAutocompleteOpts);
                 $("#details").hide();

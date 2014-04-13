@@ -340,6 +340,16 @@ s: " (The Forge <span class='s06'>0.6</span>)",
 i: "30000131"
 },
 {
+t: "Senda",
+s: " (The Forge <span class='s09'>0.9</span>)",
+i: "30020141"
+},
+{
+t: "Uitra",
+s: " (The Forge <span class='s09'>0.9</span>)",
+i: "30030141"
+},
+{
 t: "Ansila",
 s: " (The Forge <span class='s09'>0.9</span>)",
 i: "30000132"
@@ -373,6 +383,16 @@ i: "30000137"
 t: "Ikuchi",
 s: " (The Forge <span class='s10'>1.0</span>)",
 i: "30000138"
+},
+{
+t: "Sakenta",
+s: " (The Forge <span class='s10'>1.0</span>)",
+i: "30010141"
+},
+{
+t: "Aokannitoh",
+s: " (The Forge <span class='s10'>1.0</span>)",
+i: "30021407"
 },
 {
 t: "Urlen",
@@ -595,6 +615,11 @@ s: " (The Forge <span class='s05'>0.5</span>)",
 i: "30000193"
 },
 {
+t: "A3-RQ3",
+s: " (Vale of the Silent <span class='s-03'>-0.3</span>)",
+i: "30000317"
+},
+{
 t: "Antiainen",
 s: " (Lonetrek <span class='s06'>0.6</span>)",
 i: "30001357"
@@ -643,6 +668,11 @@ i: "30001366"
 t: "Hageken",
 s: " (Lonetrek <span class='s06'>0.6</span>)",
 i: "30001367"
+},
+{
+t: "Kappas",
+s: " (Lonetrek <span class='s09'>0.9</span>)",
+i: "30021392"
 },
 {
 t: "Uemisaisen",
@@ -698,6 +728,21 @@ i: "30001378"
 t: "Tunttaras",
 s: " (Lonetrek <span class='s09'>0.9</span>)",
 i: "30001379"
+},
+{
+t: "Jouvulen",
+s: " (Lonetrek <span class='s09'>0.9</span>)",
+i: "30011392"
+},
+{
+t: "Hitanishio",
+s: " (Lonetrek <span class='s09'>0.9</span>)",
+i: "30031407"
+},
+{
+t: "Ichinumi",
+s: " (Lonetrek <span class='s09'>0.9</span>)",
+i: "30041407"
 },
 {
 t: "Vellaine",
@@ -803,6 +848,11 @@ i: "30001408"
 t: "Umokka",
 s: " (Lonetrek <span class='s06'>0.6</span>)",
 i: "30001409"
+},
+{
+t: "Akiainavas",
+s: " (Lonetrek <span class='s07'>0.7</span>)",
+i: "30011407"
 },
 {
 t: "Kirras",
@@ -1045,6 +1095,11 @@ s: " (Tash-Murkon <span class='s09'>0.9</span>)",
 i: "30001674"
 },
 {
+t: "Pasha",
+s: " (Tash-Murkon <span class='s09'>0.9</span>)",
+i: "30021672"
+},
+{
 t: "Sacalan",
 s: " (Tash-Murkon <span class='s06'>0.6</span>)",
 i: "30001675"
@@ -1260,6 +1315,16 @@ s: " (Tash-Murkon <span class='s07'>0.7</span>)",
 i: "30001728"
 },
 {
+t: "Kerepa",
+s: " (Tash-Murkon <span class='s10'>1.0</span>)",
+i: "30011672"
+},
+{
+t: "Safilbab",
+s: " (Tash-Murkon <span class='s10'>1.0</span>)",
+i: "30031672"
+},
+{
 t: "Sinid",
 s: " (Tash-Murkon <span class='s07'>0.7</span>)",
 i: "30001729"
@@ -1288,6 +1353,11 @@ i: "30001733"
 t: "Zehru",
 s: " (Tash-Murkon <span class='s09'>0.9</span>)",
 i: "30001734"
+},
+{
+t: "Seitam",
+s: " (Tash-Murkon <span class='s09'>0.9</span>)",
+i: "30041672"
 },
 {
 t: "Uhodoh",
@@ -1735,6 +1805,11 @@ s: " (Domain <span class='s10'>1.0</span>)",
 i: "30002282"
 },
 {
+t: "Fora",
+s: " (Domain <span class='s09'>0.9</span>)",
+i: "30023489"
+},
+{
 t: "Aeddin",
 s: " (Molden Heath <span class='s06'>0.6</span>)",
 i: "30002383"
@@ -1815,6 +1890,11 @@ s: " (Heimatar <span class='s10'>1.0</span>)",
 i: "30002511"
 },
 {
+t: "Malukker",
+s: " (Heimatar <span class='s10'>1.0</span>)",
+i: "30012505"
+},
+{
 t: "Alakgur",
 s: " (Heimatar <span class='s06'>0.6</span>)",
 i: "30002512"
@@ -1850,6 +1930,11 @@ s: " (Heimatar <span class='s08'>0.8</span>)",
 i: "30002523"
 },
 {
+t: "Todeko",
+s: " (Heimatar <span class='s10'>1.0</span>)",
+i: "30032505"
+},
+{
 t: "Ivar",
 s: " (Heimatar <span class='s10'>1.0</span>)",
 i: "30002524"
@@ -1883,6 +1968,11 @@ i: "30002529"
 t: "Avesber",
 s: " (Heimatar <span class='s08'>0.8</span>)",
 i: "30002530"
+},
+{
+t: "Usteli",
+s: " (Heimatar <span class='s10'>1.0</span>)",
+i: "30042505"
 },
 {
 t: "Gerek",
@@ -1938,6 +2028,11 @@ i: "30002547"
 t: "Emolgranlan",
 s: " (Heimatar <span class='s05'>0.5</span>)",
 i: "30002548"
+},
+{
+t: "Hadaugago",
+s: " (Heimatar <span class='s09'>0.9</span>)",
+i: "30012547"
 },
 {
 t: "Offugen",
@@ -2018,6 +2113,21 @@ i: "30002572"
 t: "Vullat",
 s: " (Heimatar <span class='s10'>1.0</span>)",
 i: "30002573"
+},
+{
+t: "Krilmokenur",
+s: " (Heimatar <span class='s09'>0.9</span>)",
+i: "30022547"
+},
+{
+t: "Larkugei",
+s: " (Heimatar <span class='s09'>0.9</span>)",
+i: "30032547"
+},
+{
+t: "Loguttur",
+s: " (Heimatar <span class='s10'>1.0</span>)",
+i: "30042547"
 },
 {
 t: "Pettinck",
@@ -2118,6 +2228,11 @@ i: "30002660"
 t: "Botane",
 s: " (Sinq Laison <span class='s09'>0.9</span>)",
 i: "30002661"
+},
+{
+t: "Odotte",
+s: " (Sinq Laison <span class='s09'>0.9</span>)",
+i: "30012715"
 },
 {
 t: "Pulin",
@@ -2300,6 +2415,16 @@ s: " (Sinq Laison <span class='s09'>0.9</span>)",
 i: "30002711"
 },
 {
+t: "Oirtlair",
+s: " (Sinq Laison <span class='s09'>0.9</span>)",
+i: "30022715"
+},
+{
+t: "Olelon",
+s: " (Sinq Laison <span class='s09'>0.9</span>)",
+i: "30032715"
+},
+{
 t: "Alillere",
 s: " (Sinq Laison <span class='s08'>0.8</span>)",
 i: "30002712"
@@ -2363,6 +2488,11 @@ i: "30002735"
 t: "Ainaille",
 s: " (Sinq Laison <span class='s08'>0.8</span>)",
 i: "30002736"
+},
+{
+t: "Trossere",
+s: " (Sinq Laison <span class='s09'>0.9</span>)",
+i: "30042715"
 },
 {
 t: "Konola",
@@ -2590,6 +2720,11 @@ s: " (The Citadel <span class='s05'>0.5</span>)",
 i: "30002792"
 },
 {
+t: "Urhinichi",
+s: " (The Citadel <span class='s08'>0.8</span>)",
+i: "30040141"
+},
+{
 t: "Yria",
 s: " (The Citadel <span class='s05'>0.5</span>)",
 i: "30002794"
@@ -2658,6 +2793,16 @@ i: "30002818"
 t: "Motsu",
 s: " (The Citadel <span class='s09'>0.9</span>)",
 i: "30002819"
+},
+{
+t: "Komo",
+s: " (The Citadel <span class='s08'>0.8</span>)",
+i: "30031392"
+},
+{
+t: "Laah",
+s: " (The Citadel <span class='s09'>0.9</span>)",
+i: "30041392"
 },
 {
 t: "Odin",
@@ -3135,6 +3280,16 @@ s: " (Metropolis <span class='s10'>1.0</span>)",
 i: "30003380"
 },
 {
+t: "Abrat",
+s: " (Metropolis <span class='s10'>1.0</span>)",
+i: "30013410"
+},
+{
+t: "Orgron",
+s: " (Metropolis <span class='s10'>1.0</span>)",
+i: "30022505"
+},
+{
 t: "Eust",
 s: " (Metropolis <span class='s07'>0.7</span>)",
 i: "30003381"
@@ -3193,6 +3348,11 @@ i: "30003391"
 t: "Eygfe",
 s: " (Metropolis <span class='s07'>0.7</span>)",
 i: "30003392"
+},
+{
+t: "Fildar",
+s: " (Metropolis <span class='s10'>1.0</span>)",
+i: "30043410"
 },
 {
 t: "Eiluvodi",
@@ -3275,6 +3435,11 @@ s: " (Metropolis <span class='s08'>0.8</span>)",
 i: "30003408"
 },
 {
+t: "Erego",
+s: " (Metropolis <span class='s09'>0.9</span>)",
+i: "30033410"
+},
+{
 t: "Leurtmar",
 s: " (Metropolis <span class='s10'>1.0</span>)",
 i: "30003409"
@@ -3308,6 +3473,11 @@ i: "30003414"
 t: "Aldagolf",
 s: " (Metropolis <span class='s06'>0.6</span>)",
 i: "30003415"
+},
+{
+t: "Embod",
+s: " (Metropolis <span class='s10'>1.0</span>)",
+i: "30023410"
 },
 {
 t: "Aldrat",
@@ -3575,6 +3745,11 @@ s: " (Domain <span class='s08'>0.8</span>)",
 i: "30003492"
 },
 {
+t: "Deepari",
+s: " (Domain <span class='s09'>0.9</span>)",
+i: "30013489"
+},
+{
 t: "Youl",
 s: " (Domain <span class='s08'>0.8</span>)",
 i: "30003493"
@@ -3670,6 +3845,11 @@ s: " (Domain <span class='s08'>0.8</span>)",
 i: "30003512"
 },
 {
+t: "Horir",
+s: " (Domain <span class='s09'>0.9</span>)",
+i: "30043489"
+},
+{
 t: "Ides",
 s: " (Domain <span class='s08'>0.8</span>)",
 i: "30003513"
@@ -3743,6 +3923,11 @@ i: "30003526"
 t: "Chesoh",
 s: " (Domain <span class='s09'>0.9</span>)",
 i: "30003527"
+},
+{
+t: "Hanan",
+s: " (Domain <span class='s09'>0.9</span>)",
+i: "30033489"
 },
 {
 t: "Herila",
@@ -4340,6 +4525,11 @@ s: " (Kador <span class='s06'>0.6</span>)",
 i: "30004103"
 },
 {
+t: "Akhwa",
+s: " (Kador <span class='s09'>0.9</span>)",
+i: "30015042"
+},
+{
 t: "Yarebap",
 s: " (Kador <span class='s05'>0.5</span>)",
 i: "30004111"
@@ -4575,6 +4765,11 @@ s: " (Essence <span class='s09'>0.9</span>)",
 i: "30004972"
 },
 {
+t: "Couster",
+s: " (Essence <span class='s09'>0.9</span>)",
+i: "30014971"
+},
+{
 t: "Caslemon",
 s: " (Essence <span class='s06'>0.6</span>)",
 i: "30004973"
@@ -4695,6 +4890,16 @@ s: " (Essence <span class='s05'>0.5</span>)",
 i: "30005023"
 },
 {
+t: "Henebene",
+s: " (Essence <span class='s08'>0.8</span>)",
+i: "30034971"
+},
+{
+t: "Mesokel",
+s: " (Essence <span class='s09'>0.9</span>)",
+i: "30044971"
+},
+{
 t: "Atlangeins",
 s: " (Essence <span class='s09'>0.9</span>)",
 i: "30005024"
@@ -4723,6 +4928,11 @@ i: "30005028"
 t: "Vale",
 s: " (Essence <span class='s07'>0.7</span>)",
 i: "30005029"
+},
+{
+t: "Hecarrin",
+s: " (Essence <span class='s08'>0.8</span>)",
+i: "30024971"
 },
 {
 t: "Amdonen",
@@ -4765,6 +4975,11 @@ s: " (Kor-Azor <span class='s08'>0.8</span>)",
 i: "30005043"
 },
 {
+t: "Conoban",
+s: " (Kor-Azor <span class='s09'>0.9</span>)",
+i: "30045042"
+},
+{
 t: "Danyana",
 s: " (Kor-Azor <span class='s08'>0.8</span>)",
 i: "30005044"
@@ -4793,6 +5008,16 @@ i: "30005048"
 t: "Andrub",
 s: " (Kor-Azor <span class='s07'>0.7</span>)",
 i: "30005049"
+},
+{
+t: "Annad",
+s: " (Kor-Azor <span class='s08'>0.8</span>)",
+i: "30025042"
+},
+{
+t: "Chaktaren",
+s: " (Kor-Azor <span class='s08'>0.8</span>)",
+i: "30035042"
 },
 {
 t: "Kulu",
@@ -5065,6 +5290,16 @@ s: " (Verge Vendor <span class='s06'>0.6</span>)",
 i: "30005307"
 },
 {
+t: "Adallier",
+s: " (Verge Vendor <span class='s09'>0.9</span>)",
+i: "30015305"
+},
+{
+t: "Channace",
+s: " (Verge Vendor <span class='s09'>0.9</span>)",
+i: "30025305"
+},
+{
 t: "Jufvitte",
 s: " (Verge Vendor <span class='s05'>0.5</span>)",
 i: "30005308"
@@ -5125,6 +5360,16 @@ s: " (Verge Vendor <span class='s06'>0.6</span>)",
 i: "30005319"
 },
 {
+t: "Clacille",
+s: " (Verge Vendor <span class='s09'>0.9</span>)",
+i: "30035305"
+},
+{
+t: "Clellinon",
+s: " (Verge Vendor <span class='s08'>0.8</span>)",
+i: "30045305"
+},
+{
 t: "Scolluzer",
 s: " (Verge Vendor <span class='s08'>0.8</span>)",
 i: "30005322"
@@ -5173,246 +5418,6 @@ i: "30005333"
 t: "Tierijev",
 s: " (Verge Vendor <span class='s08'>0.8</span>)",
 i: "30005334"
-},
-{
-t: "Sakenta",
-s: " (The Forge <span class='s10'>1.0</span>)",
-i: "30010141"
-},
-{
-t: "Jouvulen",
-s: " (Lonetrek <span class='s09'>0.9</span>)",
-i: "30011392"
-},
-{
-t: "Akiainavas",
-s: " (Lonetrek <span class='s07'>0.7</span>)",
-i: "30011407"
-},
-{
-t: "Kerepa",
-s: " (Tash-Murkon <span class='s10'>1.0</span>)",
-i: "30011672"
-},
-{
-t: "Malukker",
-s: " (Heimatar <span class='s10'>1.0</span>)",
-i: "30012505"
-},
-{
-t: "Hadaugago",
-s: " (Heimatar <span class='s09'>0.9</span>)",
-i: "30012547"
-},
-{
-t: "Odotte",
-s: " (Sinq Laison <span class='s09'>0.9</span>)",
-i: "30012715"
-},
-{
-t: "Abrat",
-s: " (Metropolis <span class='s10'>1.0</span>)",
-i: "30013410"
-},
-{
-t: "Deepari",
-s: " (Domain <span class='s09'>0.9</span>)",
-i: "30013489"
-},
-{
-t: "Couster",
-s: " (Essence <span class='s09'>0.9</span>)",
-i: "30014971"
-},
-{
-t: "Akhwa",
-s: " (Kador <span class='s09'>0.9</span>)",
-i: "30015042"
-},
-{
-t: "Adallier",
-s: " (Verge Vendor <span class='s09'>0.9</span>)",
-i: "30015305"
-},
-{
-t: "Senda",
-s: " (The Forge <span class='s09'>0.9</span>)",
-i: "30020141"
-},
-{
-t: "Kappas",
-s: " (Lonetrek <span class='s09'>0.9</span>)",
-i: "30021392"
-},
-{
-t: "Aokannitoh",
-s: " (The Forge <span class='s10'>1.0</span>)",
-i: "30021407"
-},
-{
-t: "Pasha",
-s: " (Tash-Murkon <span class='s09'>0.9</span>)",
-i: "30021672"
-},
-{
-t: "Orgron",
-s: " (Metropolis <span class='s10'>1.0</span>)",
-i: "30022505"
-},
-{
-t: "Krilmokenur",
-s: " (Heimatar <span class='s09'>0.9</span>)",
-i: "30022547"
-},
-{
-t: "Oirtlair",
-s: " (Sinq Laison <span class='s09'>0.9</span>)",
-i: "30022715"
-},
-{
-t: "Embod",
-s: " (Metropolis <span class='s10'>1.0</span>)",
-i: "30023410"
-},
-{
-t: "Fora",
-s: " (Domain <span class='s09'>0.9</span>)",
-i: "30023489"
-},
-{
-t: "Hecarrin",
-s: " (Essence <span class='s08'>0.8</span>)",
-i: "30024971"
-},
-{
-t: "Annad",
-s: " (Kor-Azor <span class='s08'>0.8</span>)",
-i: "30025042"
-},
-{
-t: "Channace",
-s: " (Verge Vendor <span class='s09'>0.9</span>)",
-i: "30025305"
-},
-{
-t: "Uitra",
-s: " (The Forge <span class='s09'>0.9</span>)",
-i: "30030141"
-},
-{
-t: "Komo",
-s: " (The Citadel <span class='s08'>0.8</span>)",
-i: "30031392"
-},
-{
-t: "Hitanishio",
-s: " (Lonetrek <span class='s09'>0.9</span>)",
-i: "30031407"
-},
-{
-t: "Safilbab",
-s: " (Tash-Murkon <span class='s10'>1.0</span>)",
-i: "30031672"
-},
-{
-t: "Todeko",
-s: " (Heimatar <span class='s10'>1.0</span>)",
-i: "30032505"
-},
-{
-t: "Larkugei",
-s: " (Heimatar <span class='s09'>0.9</span>)",
-i: "30032547"
-},
-{
-t: "Olelon",
-s: " (Sinq Laison <span class='s09'>0.9</span>)",
-i: "30032715"
-},
-{
-t: "Erego",
-s: " (Metropolis <span class='s09'>0.9</span>)",
-i: "30033410"
-},
-{
-t: "Hanan",
-s: " (Domain <span class='s09'>0.9</span>)",
-i: "30033489"
-},
-{
-t: "Henebene",
-s: " (Essence <span class='s08'>0.8</span>)",
-i: "30034971"
-},
-{
-t: "Chaktaren",
-s: " (Kor-Azor <span class='s08'>0.8</span>)",
-i: "30035042"
-},
-{
-t: "Clacille",
-s: " (Verge Vendor <span class='s09'>0.9</span>)",
-i: "30035305"
-},
-{
-t: "Urhinichi",
-s: " (The Citadel <span class='s08'>0.8</span>)",
-i: "30040141"
-},
-{
-t: "Laah",
-s: " (The Citadel <span class='s09'>0.9</span>)",
-i: "30041392"
-},
-{
-t: "Ichinumi",
-s: " (Lonetrek <span class='s09'>0.9</span>)",
-i: "30041407"
-},
-{
-t: "Seitam",
-s: " (Tash-Murkon <span class='s09'>0.9</span>)",
-i: "30041672"
-},
-{
-t: "Usteli",
-s: " (Heimatar <span class='s10'>1.0</span>)",
-i: "30042505"
-},
-{
-t: "Loguttur",
-s: " (Heimatar <span class='s10'>1.0</span>)",
-i: "30042547"
-},
-{
-t: "Trossere",
-s: " (Sinq Laison <span class='s09'>0.9</span>)",
-i: "30042715"
-},
-{
-t: "Fildar",
-s: " (Metropolis <span class='s10'>1.0</span>)",
-i: "30043410"
-},
-{
-t: "Horir",
-s: " (Domain <span class='s09'>0.9</span>)",
-i: "30043489"
-},
-{
-t: "Mesokel",
-s: " (Essence <span class='s09'>0.9</span>)",
-i: "30044971"
-},
-{
-t: "Conoban",
-s: " (Kor-Azor <span class='s09'>0.9</span>)",
-i: "30045042"
-},
-{
-t: "Clellinon",
-s: " (Verge Vendor <span class='s08'>0.8</span>)",
-i: "30045305"
 },
 {
 t: "Samanuni",

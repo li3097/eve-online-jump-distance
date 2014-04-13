@@ -30,7 +30,7 @@ FROM
         JOIN
     mapregions as r ON ss.regionID = r.regionID
 WHERE
-    ss.security > {$minsec}");
+    ss.security > {$minsec} OR ss.solarSystemName = 'A3-RQ3'");
 
 $systems=array();
 
@@ -40,4 +40,7 @@ foreach ($systems_q as $row) {
     $nodash=str_replace('-', '', $nospace.'');
     $systems[$nodash]=$row['id'];
 }
-echo json_encode($systems);
+$strip1=str_replace(':"',':',json_encode($systems));
+$strip2=str_replace('",',',',$strip1);
+$strip3=str_replace('"}','}',$strip2);
+echo $strip3;//check json parsing rules to make ints

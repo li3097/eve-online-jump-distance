@@ -35,15 +35,29 @@
                 try {
                     var path=getJumpPath(origin, target);
                     //console.log(path);
-                    document.getElementById('jumps').value=path.length-1;
+                    var jumps=path.length-1;
+                    document.getElementById('jumps').value=jumps;
+                    var link=IGBrouteLink(path[0],path[path.length-1]);
+                    document.getElementById('ccproute').innerHTML= link;
+                    console.log(path,link);
                     showFee();
                 } catch (e){                    
                     document.getElementById('jumps').value='';
                     document.getElementById('fee').value = '';
                     document.getElementById('quote').innerHTML = '';
+                    document.getElementById('ccproute').innerHTML= '';
                 }
                 
             };
+            
+            
+            //----------- IGB stuff
+            
+            IGBrouteLink  = function(from,to){
+                return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
+            }
+            
+            //---shims
             if (typeof CCPEVE !== 'undefined') {
                 CCPEVE.requestTrust('http://really.ruok.org');
                 isIGB = true;
@@ -59,6 +73,12 @@
                     },
                     createContract: function() {
                         alert('please use in game browser to create contract');
+                    },
+                    showRouteTo: function () {
+                        alert('please use in game browser to show routes');                        
+                    },
+                    clearAllWaypoints: function () {
+                        alert('please use in game browser to show routes');                        
                     }
                 };
             }
@@ -175,7 +195,7 @@
         </tr>
         <tr>
         <td>Destination&nbsp;</td>
-        <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"></td>
+        <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"> <span id="ccproute"></span></td>
         </tr>
         
         <tr>

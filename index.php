@@ -38,14 +38,14 @@
                     var jumps=path.length-1;
                     document.getElementById('jumps').value=jumps;
                     var link=IGBrouteLink(path[0],path[path.length-1]);
-                    document.getElementById('ccproute').innerHTML= link;
+                    //document.getElementById('ccproute').innerHTML= link;
                     console.log(path,link);
                     showFee();
                 } catch (e){                    
                     document.getElementById('jumps').value='';
                     document.getElementById('fee').value = '';
                     document.getElementById('quote').innerHTML = '';
-                    document.getElementById('ccproute').innerHTML= '';
+                    //document.getElementById('ccproute').innerHTML= '';
                 }
                 
             };
@@ -54,7 +54,8 @@
             //----------- IGB stuff
             
             IGBrouteLink  = function(from,to){
-                return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
+                //return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
+                return '<a onClick="CCPEVE.showRouteTo('+"'"+from+"::"+to+"');"+'">Show Route</a>';
             }
             
             //---shims

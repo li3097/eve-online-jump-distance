@@ -1,15 +1,40 @@
 //javascript implementation of http://blog.evepanel.net/eve-online/static-data-dump/calculating-the-shortest-route-between-two-systems.html
-
+function systemToID(system){    
+   if (typeof system !== 'string'){
+            throw new Error("systemToID(system): system must be a string");
+   }
+   var s=system.replace(' ', '').replace('-','');
+   return systemToID_hash[s];
+}
 function getJumpPath(origin, target, nodes) {   
     var resultPath = []; 
     if (nodes===undefined){
         nodes=jumps;
     }
     
-    if (typeof origin !== 'number' || typeof target !== 'number') {
-        //invalid inputs        
-        throw new Error("getJumpPath(origin, target, nodes): origin["+origin+"] and target["+target+"] must be a number");
-    }
+function checkSystemID(system){
+        if (typeof system === 'string'){
+            //if a string is entered, translate to the systemID equivalent
+            var id=parseInt(systemToID(system));
+            if (typeof id ==='number'){
+                system = id;
+            } else {                
+                throw new Error("getJumpPath(): ["+system+"] could not be matched to a systemID");
+            }
+        }  
+        
+        if (typeof system === 'number'){
+            if (nodes[system]===undefined){
+                throw new Error("getJumpPath(): ["+system+"] not found in nodes");                
+            } else {
+                return system;
+            }
+        } else {
+            throw new Error("getJumpPath(): ["+system+"] invalid object type");               
+        }
+    }    
+    origin=checkSystemID(origin);
+    target=checkSystemID(target);
     
     // Target and origin the same, no distance
     if (origin === target) {

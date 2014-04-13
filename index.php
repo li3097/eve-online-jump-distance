@@ -205,6 +205,8 @@
 <h2>Useful Links</h2>
 <ul>
     <li><a href="http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505">RvB Forum Post<a/></li>
+    <li><a onClick="CCPEVE.joinChannel('R-V-B')">RvB Recruitment - Join the forever war!<a/></li>
+    <li><a onClick="CCPEVE.joinChannel('RvB Ganked')">RvB Ganked - Come and gank null-sec'ers! (no membership required)<a/></li>
 </ul>
 </body>
 </html>

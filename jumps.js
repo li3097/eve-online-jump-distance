@@ -47,11 +47,11 @@ function getJumpPath(origin, target, nodes) {
                 // Build an array of ordered system IDs we need to
                 // visit to get from the origin system to the
                 // target system
-                if (neighborSystem == target) {
+                if (neighborSystem === target) {
                     //build path by traversing jump parents
                     resultPath.push(neighborSystem);
                     resultPath.push(currentSystem);
-                    while (visitedSystems[currentSystem] != origin) {   
+                    while (visitedSystems[currentSystem] !== origin) {   
                         currentSystem = visitedSystems[currentSystem];
                         resultPath.push(currentSystem);     
                     }
@@ -63,7 +63,7 @@ function getJumpPath(origin, target, nodes) {
                 // Otherwise, store the current - neighbour
                 // Connection in the visited systems and add the
                 // neighbour to the systems within reach
-                if (visitedSystems[neighborSystem] == undefined) {
+                if (visitedSystems[neighborSystem] === undefined) {
                     visitedSystems[neighborSystem] = currentSystem;
                     withinReach.push(neighborSystem);
                 }                

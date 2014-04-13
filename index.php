@@ -151,8 +151,8 @@
                 <li>Jita - Josameto: <i>1.5 mill isk</i></li>
                 <li>Jita - Poinen: <i>2 mill isk</i></li>
             </ul>
-            <b>*Long haul available in hi-sec only</b><br>
-            *JF service available to A3-RQ3
+            <b>Long haul available in hi-sec only</b><br>
+            Jump Freighter service <b>now available to A3-RQ3!</b>
             <h2>Size limitations</h2>
             Loads are accepted up to 900,000 m3.<br/>
             For loads up to 100,000 Please break
@@ -200,7 +200,7 @@
     <li>Collateral less than or equal to 1b isk. BE REALISTIC OR FACE REFUSAL, COLLATERAL SHOULD MATCH THE VALUE OF YOUR GOODS</li>
     <li>Set the contract to 3 days expiration with 1 days to complete (or 2 days completion for long haul)</li>
 </ol>
-<u>Note</u> : We no longer offer discounts as 10% of all contracts are paid back to RvB to benefit the members.
+<u>Note</u>: We no longer offer discounts as 10% of all contracts are paid back to RvB to benefit the members.
 <hr/>
 <h2>Useful Links</h2>
 <ul>

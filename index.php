@@ -20,7 +20,7 @@
         </style>       
 
         <script type="text/javascript">
-                
+
             getFee = function(jumps) {
                 return (.5 + (.5 * jumps)) + ' mill ISK';
             };
@@ -29,35 +29,35 @@
                 document.getElementById('fee').value = fee;
                 document.getElementById('quote').innerHTML = ' (' + fee + ')';
             };
-            renderPath = function(){
-                var origin= $('#s').val();
-                var target= $('#d').val();
+            renderPath = function() {
+                var origin = $('#s').val();
+                var target = $('#d').val();
                 try {
-                    var path=getJumpPath(origin, target);
+                    var path = getJumpPath(origin, target);
                     //console.log(path);
-                    var jumps=path.length-1;
-                    document.getElementById('jumps').value=jumps;
-                    var link=IGBrouteLink(path[0],path[path.length-1]);
+                    var jumps = path.length - 1;
+                    document.getElementById('jumps').value = jumps;
+                    var link = IGBrouteLink(path[0], path[path.length - 1]);
                     //document.getElementById('ccproute').innerHTML= link;
-                    console.log(path,link);
+                    console.log(path, link);
                     showFee();
-                } catch (e){                    
-                    document.getElementById('jumps').value='';
+                } catch (e) {
+                    document.getElementById('jumps').value = '';
                     document.getElementById('fee').value = '';
                     document.getElementById('quote').innerHTML = '';
                     //document.getElementById('ccproute').innerHTML= '';
                 }
-                
+
             };
-            
-            
+
+
             //----------- IGB stuff
-            
-            IGBrouteLink  = function(from,to){
+
+            IGBrouteLink = function(from, to) {
                 //return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
-                return '<a onClick="CCPEVE.showRouteTo('+"'"+from+"::"+to+"');"+'">Show Route</a>';
+                return '<a onClick="CCPEVE.showRouteTo(' + "'" + from + "::" + to + "');" + '">Show Route</a>';
             }
-            
+
             //---shims
             if (typeof CCPEVE !== 'undefined') {
                 CCPEVE.requestTrust('http://really.ruok.org');
@@ -75,11 +75,11 @@
                     createContract: function() {
                         alert('please use in game browser to create contract');
                     },
-                    showRouteTo: function () {
-                        alert('please use in game browser to show routes');                        
+                    showRouteTo: function() {
+                        alert('please use in game browser to show routes');
                     },
-                    clearAllWaypoints: function () {
-                        alert('please use in game browser to show routes');                        
+                    clearAllWaypoints: function() {
+                        alert('please use in game browser to show routes');
                     }
                 };
             }
@@ -95,21 +95,21 @@
                     i.style.color = "white";
                 }
             }
-            systemAutocompleteOpts={
-                            width: 300,
-                            formatItem: function(item)
-                            {
-                                return item.t + item.s;
-                            },
-                            formatResult: function(item)
-                            {
-                                return item.t;
-                            }
-                        };
+            systemAutocompleteOpts = {
+                width: 300,
+                formatItem: function(item)
+                {
+                    return item.t + item.s;
+                },
+                formatResult: function(item)
+                {
+                    return item.t;
+                }
+            };
             $(document).ready(function()
             {
-                $("#d").autocomplete(systems,systemAutocompleteOpts);
-                $("#s").autocomplete(systems,systemAutocompleteOpts);
+                $("#d").autocomplete(systems, systemAutocompleteOpts);
+                $("#s").autocomplete(systems, systemAutocompleteOpts);
                 $("#details").hide();
                 $("#showdetails").text("Show details");
                 $("#showdetails").click(function() {
@@ -135,28 +135,28 @@
                         return false;
                     }
                 });
-                $("body").delegate('#jumps','keyup',function(){
+                $("body").delegate('#jumps', 'keyup', function() {
                     showFee();
                 });
-                $("body").delegate('#jumps','change',function(){
+                $("body").delegate('#jumps', 'change', function() {
                     showFee();
                 });
-                
-                
-                $("body").delegate('#d','change',function(){
-                    setTimeout(renderPath,250);                    
+
+
+                $("body").delegate('#d', 'change', function() {
+                    setTimeout(renderPath, 250);
                 });
-                $("body").delegate('#s','change',function(){
-                    setTimeout(renderPath,250);                 
+                $("body").delegate('#s', 'change', function() {
+                    setTimeout(renderPath, 250);
                 });
-                $("body").delegate('#d','keyup',function(){
-                    setTimeout(renderPath,250);                    
+                $("body").delegate('#d', 'keyup', function() {
+                    setTimeout(renderPath, 250);
                 });
-                $("body").delegate('#s','keyup',function(){
-                    setTimeout(renderPath,250);                 
+                $("body").delegate('#s', 'keyup', function() {
+                    setTimeout(renderPath, 250);
                 });
-                
-                setTimeout(renderPath,100);                               
+
+                setTimeout(renderPath, 100);
             });
 
         </script>
@@ -190,15 +190,15 @@
 <form>
     <table style="margin-left: 20px;">
         <tr>
-        <td>Start System&nbsp;</td>
-        <td> <input type="text" name="s" id="s" class="text" value="Jita" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
-        </td>
+            <td>Start System&nbsp;</td>
+            <td> <input type="text" name="s" id="s" class="text" value="Jita" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
+            </td>
         </tr>
         <tr>
-        <td>Destination&nbsp;</td>
-        <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"> <span id="ccproute"></span></td>
+            <td>Destination&nbsp;</td>
+            <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"> <span id="ccproute"></span></td>
         </tr>
-        
+
         <tr>
             <td>Jumps</td>
             <td><input type="text" name="jumps" id="jumps" class="text" tabindex="1"></td>

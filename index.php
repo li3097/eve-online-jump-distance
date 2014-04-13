@@ -44,7 +44,7 @@
                     document.getElementById('quote').innerHTML = '';
                 }
                 
-            }
+            };
             if (typeof CCPEVE !== 'undefined') {
                 CCPEVE.requestTrust('http://really.ruok.org');
                 isIGB = true;
@@ -94,7 +94,7 @@
                 $("#showdetails").text("Show details");
                 $("#showdetails").click(function() {
                     $(this).fadeOut('fast', function() {
-                        $(this).text($(this).text() == 'Show details' ? 'Hide details' : 'Show details');
+                        $(this).text($(this).text() === 'Show details' ? 'Hide details' : 'Show details');
                     });
                     $('#details').animate({
                         opacity: 'toggle',
@@ -104,12 +104,12 @@
                     });
                     $(this).fadeIn('slow');
                     // Save preference in session
-                    if ($(this).text() == 'Hide details')
+                    if ($(this).text() === 'Hide details')
                     {
                         $.ajax({url: 'ajax/prefs.php?prefs=hide'});
                         return false;
                     }
-                    if ($(this).text() == 'Show details')
+                    if ($(this).text() === 'Show details')
                     {
                         $.ajax({url: 'ajax/prefs.php?prefs=show'});
                         return false;

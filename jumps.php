@@ -43,8 +43,8 @@ FROM mapsolarsystemjumps as msj
 JOIN mapsolarsystems as s1 on msj.fromSolarSystemID=s1.solarSystemID
 JOIN mapsolarsystems as s2 on msj.fromSolarSystemID=s2.solarSystemID
 
-WHERE s1.security >= {$minsec}
-AND s2.security >= {$minsec}");
+#WHERE s1.security >= {$minsec}
+#AND s2.security >= {$minsec}");
 
 foreach ($result as $row) {
     $from = (int) $row['fromSolarSystemID'];
@@ -55,9 +55,9 @@ foreach ($result as $row) {
     }
     $jumps[$from][] = $to;
 }
-echo '<br>Calculating Jumps<br>'
-. "var jumps='".json_encode($jumps)."';<br>";die;
-        
+/*echo '<br>Calculating Jumps<br>'
+. "var jumps='".json_encode($jumps)."';<br>";die;*/
+
 
 // Start the fun
 if (isset($jumps[$origin]) && isset($jumps[$target])) {

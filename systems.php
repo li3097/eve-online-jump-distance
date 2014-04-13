@@ -30,7 +30,7 @@ FROM
         JOIN
     mapregions as r ON ss.regionID = r.regionID
 WHERE
-    ss.security > {$minsec}");
+    ss.security > {$minsec} OR ss.solarSystemName = 'A3-RQ3'");
 
 $systems=array();
 

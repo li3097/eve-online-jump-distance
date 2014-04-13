@@ -3,208 +3,13 @@
 <html>
     <head>
         <title>Under Powered Shrubberies</title>
-        <style>
-
-            body
-            {
-                font-family: Arial Narrow, Arial, Helvetica;
-                background-color: black;
-                background-repeat:no-repeat;
-                background-position: center top;
-                color: #DDD;
-                /*font-size: 120%;*/
-            }
-            a, a:link, a:visited
-            {
-                color: orange;
-            }
-            form
-            {
-                margin: 0;
-            }
-            input.text, textarea.text, select.text
-            {
-                background-color: #333;
-                color: #DDD;
-                border: solid 1px #DDD;
-            }
-            input.button
-            {
-                background-color: #333;
-                color: #FFF;
-                border: 2px solid #999;
-            }
-            .contracthistory td, .contracthistory th
-            {
-                padding: 0 8px;
-                margin: 0;
-                vertical-align: bottom;
-                border-bottom: solid 1px #666;
-            }
-            .contracthistory tr.rush
-            {
-                background-color: #3E0058;
-            }
-            .contracthistory tr.rush td
-            {
-                border-top: solid 2px #8715B6;
-                border-bottom: solid 2px #8715B6;
-            }
-            .mediumtable td, .contracthistory th
-            {
-                font-size: 90% !important;
-            }
-
-            .ac_results {
-                padding: 0px;
-                border: 1px solid black;
-                background-color: white;
-                overflow: hidden;
-                z-index: 99999;
-                width: 200px;
-            }
-
-            .ac_results ul {
-                list-style-position: outside;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            .ac_results li {
-                margin: 0px;
-                padding: 2px 5px;
-                cursor: default;
-                display: block;
-                line-height: 16px;
-                overflow: hidden;
-                background-color: #333;
-                font-size: 0.8em;
-            }
-            .ac_loading {
-                background: white url('../img/indicator.gif') right center no-repeat;
-            }
-            .ac_odd {
-                /* none */
-            }
-            .ac_over {
-                background-color: #555 !important;
-                color: white;
-            }
-            #nav 
-            {
-                border: solid 1px #777;
-                padding: 4px;
-                width: 140px; 
-                margin-right: 10px;
-                float: left; 
-                margin-top: 20px;
-            }
-            #nav ul
-            {
-                margin-top: 5px;
-                margin-bottom: 5px;
-                margin-left: 20px;
-                padding-left: 0px;
-            }
-            #nav ul li
-            {
-                margin-left: 0px;
-                padding-left: 0px;
-            }
-            .routeDot
-            {
-                width: 5px; 
-                height: 5px;
-                margin-left: 2px;
-                display: inline;
-                float: left;
-                font-size: 1pt;
-            }
-            .s10 {
-                color: #2FEFEF;
-            }
-            .s09 {
-                color: #47EFBF;
-            }
-            .s08 {
-                color: #00F048;
-            }
-            .s07 {
-                color: #00EF00;
-            }
-            .s06 {
-                color: #90F030;
-            }
-            .s05 {
-                color: #F0F000;
-            }
-            .s04 {
-                color: red;
-            }
-            .s03 {
-                color: red;
-            }
-            .s02 {
-                color: red;
-            }
-            .s01 {
-                color: red;
-            }
-            .s00 {
-                color: red;
-            }
-            .error
-            {
-                color: #DD0000;
-                font-weight: bold;
-            }
-            .medical li
-            {
-                list-style-image: url(/img/medical_32.png);
-            }
-            .dot
-            {
-                background-color: #F0F000; 
-                color: black; 
-                font-size: 9pt;
-                width: 15px;
-                text-align: center;
-                margin-left: 3px;
-                display: inline-block;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                border-radius: 10px;
-            }
-            .n
-            {
-                background-color: #F0F000; 
-            }
-            .u
-            {
-                background-color: #E4C210; 
-            }
-            .p
-            {
-                background-color: #D1B310; 
-            }
-            div.box
-            {
-                border: solid 1px #999;
-                padding: 5px 15px;
-                -webkit-border-radius: 15px;
-                -moz-border-radius: 15px;
-                border-radius: 15px;
-            }
-            span.addwaypoint
-            {
-                background-color: #A0A000;
-                margin-left: 5px;
-            }
-            span.addwaypoint a
-            {
-                color: black !important;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/eve_dark.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="evedata.js"></script>
+        <script type="text/javascript" src="systemToID.js"></script>
+        <script type="text/javascript" src="jumps.js"></script>
+        <script type="text/javascript" src="shortestRoute.js"></script>
         <style>
             div.infobox {
                 border: solid white;
@@ -214,11 +19,9 @@
             }
             div.infobox h2 {
             }
-        </style>
+        </style>       
+
         <script type="text/javascript">
-            
-            <?php include 'jq.js' ?>
-            <?php include 'jumps.js' ?>
                 
             getFee = function(jumps) {
                 return (.5 + (.5 * jumps)) + ' mill ISK';
@@ -258,32 +61,21 @@
                     i.style.color = "white";
                 }
             }
+            systemAutocompleteOpts={
+                            width: 300,
+                            formatItem: function(item)
+                            {
+                                return item.t + item.s;
+                            },
+                            formatResult: function(item)
+                            {
+                                return item.t;
+                            }
+                        };
             $(document).ready(function()
             {
-                $("#d").autocomplete(systems,
-                        {
-                            width: 300,
-                            formatItem: function(item)
-                            {
-                                return item.t + item.s;
-                            },
-                            formatResult: function(item)
-                            {
-                                return item.t;
-                            }
-                        });
-                $("#s").autocomplete(systems,
-                        {
-                            width: 300,
-                            formatItem: function(item)
-                            {
-                                return item.t + item.s;
-                            },
-                            formatResult: function(item)
-                            {
-                                return item.t;
-                            }
-                        });
+                $("#d").autocomplete(systems,systemAutocompleteOpts);
+                $("#s").autocomplete(systems,systemAutocompleteOpts);
                 $("#details").hide();
                 $("#showdetails").text("Show details");
                 $("#showdetails").click(function() {
@@ -348,6 +140,7 @@
 <hr/>
 <form>
     <table style="margin-left: 20px;">
+        <!--
         <tr>
         <td>Start System&nbsp;</td>
         <td> <input type="text" name="s" id="s" class="text" value="Aldrat" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
@@ -357,7 +150,7 @@
         <td>Destination&nbsp;</td>
         <td><input type="text" name="d" id="d" class="text" value="Jita" tabindex="2"></td>
         </tr>
-        
+        -->
         
         <tr>
             <td>Jumps</td>

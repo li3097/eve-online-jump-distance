@@ -4,10 +4,10 @@
     <head>
         <title>Under Powered Shrubberies</title>
         <link rel="stylesheet" type="text/css" href="css/eve_dark.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.autocomplete.pack.js"></script>
         <script type="text/javascript" src="evedata.js"></script>
+        <script type="text/javascript" src="systemToID.js"></script>
         <script type="text/javascript" src="jumps.js"></script>
         <style>
             div.infobox {
@@ -30,6 +30,21 @@
                 document.getElementById('fee').value = fee;
                 document.getElementById('quote').innerHTML = ' (' + fee + ')';
             };
+            renderPath = function(){
+                var origin= $('#s').val();
+                var target= $('#d').val();
+                try {
+                    var path=getJumpPath(origin, target);
+                    //console.log(path);
+                    document.getElementById('jumps').value=path.length-1;
+                    showFee();
+                } catch (e){                    
+                    document.getElementById('jumps').value='';
+                    document.getElementById('fee').value = '';
+                    document.getElementById('quote').innerHTML = '';
+                }
+                
+            }
             if (typeof CCPEVE !== 'undefined') {
                 CCPEVE.requestTrust('http://really.ruok.org');
                 isIGB = true;
@@ -107,6 +122,21 @@
                     showFee();
                 });
                 
+                
+                $("body").delegate('#d','change',function(){
+                    setTimeout(renderPath,250);                    
+                });
+                $("body").delegate('#s','change',function(){
+                    setTimeout(renderPath,250);                 
+                });
+                $("body").delegate('#d','keyup',function(){
+                    setTimeout(renderPath,250);                    
+                });
+                $("body").delegate('#s','keyup',function(){
+                    setTimeout(renderPath,250);                 
+                });
+                
+                setTimeout(renderPath,100);                               
             });
 
         </script>
@@ -139,22 +169,19 @@
 <hr/>
 <form>
     <table style="margin-left: 20px;">
-        <!--
         <tr>
         <td>Start System&nbsp;</td>
-        <td> <input type="text" name="s" id="s" class="text" value="Aldrat" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
+        <td> <input type="text" name="s" id="s" class="text" value="Jita" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
         </td>
         </tr>
         <tr>
         <td>Destination&nbsp;</td>
-        <td><input type="text" name="d" id="d" class="text" value="Jita" tabindex="2"></td>
+        <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"></td>
         </tr>
-        -->
         
         <tr>
             <td>Jumps</td>
-            <td><input type="text" name="jumps" id="jumps" class="text" style="color:#888;" 
-                       value="-Enter number of Jumps-" onfocus="inputFocus(this)" onblur="inputBlur(this)" tabindex="1"></td>
+            <td><input type="text" name="jumps" id="jumps" class="text" tabindex="1"></td>
         </tr>
         <tr>
             <td>Fee</td>
@@ -179,8 +206,6 @@
 <h2>Useful Links</h2>
 <ul>
     <li><a href="http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505">RvB Forum Post<a/></li>
-    <li><a onClick="CCPEVE.joinChannel('R-V-B')">RvB Recruitment - Join the forever war!<a/></li>
-    <li><a onClick="CCPEVE.joinChannel('RvB Ganked')">RvB Ganked - Come and gank null-sec'ers! (no membership required)<a/></li>
 </ul>
 </body>
 </html>

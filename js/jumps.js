@@ -9,7 +9,7 @@ function systemToID(system) {
 function getJumpPath(origin, target, nodes) {
     var resultPath = [];
     if (nodes === undefined) {
-        nodes = jumps;
+        nodes = jump_path_all;
     }
 
     function checkSystemID(system) {
@@ -40,7 +40,7 @@ function getJumpPath(origin, target, nodes) {
     if (origin === target) {
         resultPath.push(origin);
         return resultPath;
-    } else if (nodes[origin][target]) {
+    } else if (nodes[origin].indexOf(target)!=-1) {
         // Target is a neigbour system of origin
         resultPath.push(origin);
         resultPath.push(target);
@@ -49,14 +49,19 @@ function getJumpPath(origin, target, nodes) {
         // Already visited system
         var visitedSystems = {};
         // Limit the number of iterations
-        var remainingJumps = 9000;
+        var maxJumps = 4000;
         // Systems we can reach from here
         var withinReach = [];
         withinReach.push(origin);
         // Will contain the system IDs         
 
-        while (withinReach.length > 0 && remainingJumps > 0) {
-            remainingJumps--;//timeout at 9k jumps
+        while (withinReach.length > 0) {
+            maxJumps--;//timeout at 9k jumps
+            if (maxJumps<1){
+                            window.err=[];
+                            err['visited']=visitedSystems;
+                            throw new Error("getJumpPath(): exceeded maxjumps pathing from:"+origin+" to:"+target+".");                    
+            }
 
             // Jump to the first system within reach          
             var currentSystem = withinReach.shift();
@@ -76,9 +81,18 @@ function getJumpPath(origin, target, nodes) {
                     //build path by traversing jump parents
                     resultPath.push(neighborSystem);
                     resultPath.push(currentSystem);
+                    var len=0;
                     while (visitedSystems[currentSystem] !== origin) {
                         currentSystem = visitedSystems[currentSystem];
                         resultPath.push(currentSystem);
+                        len++;
+                        if (len > 100) {
+                            
+                            window.err=[];
+                            err['visited']=visitedSystems;
+                            err['path']=resultPath;
+                            throw new Error("getJumpPath(): path exceeds 100 from:"+origin+" to:"+target+" path:"+resultPath);                            
+                        }
                     }
                     resultPath.push(origin);
                     resultPath.reverse();

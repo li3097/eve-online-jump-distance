@@ -22,39 +22,54 @@ class dynObject {
 /* 
  * Database query for solar system info
  */
-function systems_q($minsec=0.5){
+function db_systems($minsec=0.5){
     global $dbinfo;
-    // Assuming a mysql conversion of the Static Data Dump
-    // in the database evesdd
     $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
-
-    //Load System information
-    $systems_q = $dbConnection->query("SELECT 
-        ss.solarSystemID as id,
-        ss.solarSystemName as system,
-        ROUND(ss.security, 1)  as sec,
-        c.constellationName as constellation,
-        r.regionName as region
-    FROM
-        evesdd_crucible_11.mapsolarsystems as ss
-            JOIN
-        mapconstellations as c ON ss.constellationID = c.constellationID
-            JOIN
-        mapregions as r ON ss.regionID = r.regionID
-    WHERE
-        ss.security > {$minsec} OR ss.solarSystemName = 'A3-RQ3'");
-        
-    return $systems_q;
+    $sql="SELECT ss.solarSystemID as id, ss.solarSystemName as system, ROUND(ss.security, 1)  as sec,c.constellationName as constellation, r.regionName as region
+    FROM evesdd_crucible_11.mapsolarsystems as ss
+    JOIN mapconstellations as c ON ss.constellationID = c.constellationID
+    JOIN mapregions as r ON ss.regionID = r.regionID";    
+    if (!is_null($minsec)){
+        $sql.=" WHERE ss.security > {$minsec} OR ss.solarSystemName = 'A3-RQ3'";
+    }        
+    return $dbConnection->query($sql);
 }
-
+/*
+ * Database query for jumps
+ */
+function db_jumps($minsec=null){
+    global $dbinfo;
+    $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
+    $sql="SELECT msj.fromSolarSystemID ,msj.toSolarSystemID#, s1.security as fromSec, s2.security as toSec
+    FROM mapsolarsystemjumps as msj
+    JOIN mapsolarsystems as s1 on msj.fromSolarSystemID=s1.solarSystemID
+    JOIN mapsolarsystems as s2 on msj.fromSolarSystemID=s2.solarSystemID";    
+    if (!is_null($minsec)){
+        $sql.=" WHERE s1.security >= ".(float)$minsec." AND s2.security >= ".(float)$minsec;
+    }
+    return $dbConnection->query($sql);
+}
+function jump_nodes($minsec){
+    $result=db_jumps($minsec);
+    $jumps=array();
+    foreach ($result as $row) {
+        $from = (int) $row['fromSolarSystemID'];
+        $to   = (int) $row['toSolarSystemID'];
+        if (!isset($jumps[$from])) {
+            $jumps[$from] = array();
+        }
+        $jumps[$from][] = $to;
+    }
+    return $jumps;
+}
 /*
  * Generates autocomplete data
  */
 function systems_ac($minsec)
 {
     $systems=array();
-    $systems_q= systems_q($minsec);
-    foreach ($systems_q as $row) {
+    $db_systems= db_systems($minsec);
+    foreach ($db_systems as $row) {
         $system=new dynObject();
         $system->t=$row['system'];
         $system->s=' ('.$row['region']." <span class='s".str_replace('.', '', $row['sec'].'')."'>".$row['sec'].'</span>)';
@@ -69,8 +84,8 @@ function systems_ac($minsec)
  */
 function systemsByName($minsec){       
     $systems=array();
-    $systems_q=systems_q($minsec);    
-    foreach ($systems_q as $row) {
+    $db_systems=db_systems($minsec);    
+    foreach ($db_systems as $row) {
         $nospace=str_replace(' ', '', $row['system'].'');
         $nodash=str_replace('-', '', $nospace.'');
         $systems[$nodash]=$row['id'];
@@ -87,10 +102,13 @@ function systemsByName_json($minsec){
     return $strip3;//check json parsing rules to make ints
 }
 
+/*
+ * Create array of system info
+ */
 function systemsByID($minsec){    
     $systems=new dynObject();
-    $systems_q=systems_q($minsec);    
-    foreach ($systems_q as $row) {
+    $db_systems=db_systems($minsec);    
+    foreach ($db_systems as $row) {
         $systems->$row['id']=new dynObject();
         $systems->$row['id']->system=$row['system'];
         $systems->$row['id']->sec=$row['sec'];

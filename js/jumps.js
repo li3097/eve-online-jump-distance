@@ -40,7 +40,7 @@ function getJumpPath(origin, target, nodes) {
     if (origin === target) {
         resultPath.push(origin);
         return resultPath;
-    } else if (nodes[origin].indexOf(target)!=-1) {
+    } else if (nodes[origin].indexOf(target)!==-1) {
         // Target is a neigbour system of origin
         resultPath.push(origin);
         resultPath.push(target);
@@ -60,7 +60,7 @@ function getJumpPath(origin, target, nodes) {
             if (maxJumps<1){
                             window.err=[];
                             err['visited']=visitedSystems;
-                            console.log('systems:',visitedSystems.length+'/'+nodes.length);
+                            console.log('visited:',visitedSystems);
                             throw new Error("getJumpPath(): exceeded maxjumps pathing from:"+origin+" to:"+target+".");                    
             }
 
@@ -92,8 +92,8 @@ function getJumpPath(origin, target, nodes) {
                             window.err=[];
                             err['visited']=visitedSystems;
                             err['path']=resultPath;
-                            console.log('systems:',visitedSystems.length+'/'+nodes.length);
-                            console.log('path',resultPath);
+                            console.log('visited:',visitedSystems);
+                            console.log('path:',resultPath);
                             throw new Error("getJumpPath(): path exceeds 100 from:"+origin+" to:"+target+" path:"+resultPath);                            
                         }
                     }
@@ -111,6 +111,7 @@ function getJumpPath(origin, target, nodes) {
                 }
             }
         }
-        return false;
+        console.log(visitedSystems);
+        throw new Error("getJumpPath(): no path from:"+origin+" to:"+target);  
     }
 }

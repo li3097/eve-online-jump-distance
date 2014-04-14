@@ -10,7 +10,7 @@ function showFee() {
 function renderPath() {
     var origin = $('#s').val();
     var target = $('#d').val();
-    console.log(origin,target);
+    //console.log(origin,target);
 
     try {
         if ('A3-RQ3'==origin||'A3-RQ3'==target){
@@ -26,8 +26,8 @@ function renderPath() {
         //console.log(path, link);
         showFee();
     } catch (e) {
-        console.log(e.message, e.stack);
-        document.getElementById('jumps').value = '';
+        //console.log(e.message, e.stack);
+        document.getElementById('jumps').value = '**No path through Hi-sec**';
         document.getElementById('fee').value = '';
         document.getElementById('quote').innerHTML = '';
         //document.getElementById('ccproute').innerHTML= '';

@@ -25,7 +25,7 @@ class dynObject {
 function db_systems($minsec=0.5){
     global $dbinfo;
     $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
-    $sql="SELECT ss.solarSystemID as id, ss.solarSystemName as system, ss.security  as sec,c.constellationName as constellation, r.regionName as region
+    $sql="SELECT ss.solarSystemID-30000000 as id, ss.solarSystemName as system, ROUND(ss.security,1) as sec,c.constellationName as constellation, r.regionName as region
     FROM evesdd_crucible_11.mapsolarsystems as ss
     JOIN mapconstellations as c ON ss.constellationID = c.constellationID
     JOIN mapregions as r ON ss.regionID = r.regionID";    
@@ -40,7 +40,7 @@ function db_systems($minsec=0.5){
 function db_jumps($minsec=null){
     global $dbinfo;
     $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
-    $sql="SELECT msj.fromSolarSystemID ,msj.toSolarSystemID#, s1.security as fromSec, s2.security as toSec
+    $sql="SELECT msj.fromSolarSystemID-30000000 as fromSolarSystemID, msj.toSolarSystemID-30000000 as toSolarSystemID #, s1.security as fromSec, s2.security as toSec
     FROM mapsolarsystemjumps as msj
     JOIN mapsolarsystems as s1 on msj.fromSolarSystemID=s1.solarSystemID
     JOIN mapsolarsystems as s2 on msj.toSolarSystemID=s2.solarSystemID";    

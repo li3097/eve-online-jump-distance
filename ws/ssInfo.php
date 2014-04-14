@@ -1,5 +1,4 @@
 <?php
 include 'models.php';
 header('Content-Type: application/json');
-echo (systemsByName_json(0.5));
-
+echo json_encode(systemsByID(0.5));

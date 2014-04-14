@@ -1,3 +1,5460 @@
+var ssInfo={
+30000001: {
+system: "Tanoo",
+sec: "0.9",
+region: "Derelik"
+},
+30000002: {
+system: "Lashesih",
+sec: "0.8",
+region: "Derelik"
+},
+30000003: {
+system: "Akpivem",
+sec: "0.8",
+region: "Derelik"
+},
+30000004: {
+system: "Jark",
+sec: "0.8",
+region: "Derelik"
+},
+30000005: {
+system: "Sasta",
+sec: "0.8",
+region: "Derelik"
+},
+30000006: {
+system: "Zaid",
+sec: "0.9",
+region: "Derelik"
+},
+30000007: {
+system: "Yuzier",
+sec: "0.9",
+region: "Derelik"
+},
+30000008: {
+system: "Nirbhi",
+sec: "0.9",
+region: "Derelik"
+},
+30000009: {
+system: "Sooma",
+sec: "0.6",
+region: "Derelik"
+},
+30000010: {
+system: "Chidah",
+sec: "0.5",
+region: "Derelik"
+},
+30000023: {
+system: "Fovihi",
+sec: "0.9",
+region: "Derelik"
+},
+30000024: {
+system: "Kiereend",
+sec: "0.8",
+region: "Derelik"
+},
+30000025: {
+system: "Rashy",
+sec: "0.8",
+region: "Derelik"
+},
+30000026: {
+system: "Ordize",
+sec: "0.7",
+region: "Derelik"
+},
+30000027: {
+system: "Psasa",
+sec: "0.7",
+region: "Derelik"
+},
+30000028: {
+system: "Eshtah",
+sec: "0.8",
+region: "Derelik"
+},
+30000029: {
+system: "Lachailes",
+sec: "0.6",
+region: "Derelik"
+},
+30000030: {
+system: "Kasrasi",
+sec: "0.6",
+region: "Derelik"
+},
+30000031: {
+system: "Mohas",
+sec: "0.7",
+region: "Derelik"
+},
+30000032: {
+system: "Hasiari",
+sec: "0.8",
+region: "Derelik"
+},
+30000033: {
+system: "Radima",
+sec: "0.8",
+region: "Derelik"
+},
+30000034: {
+system: "Alkez",
+sec: "0.8",
+region: "Derelik"
+},
+30000035: {
+system: "Nimambal",
+sec: "0.6",
+region: "Derelik"
+},
+30000051: {
+system: "Juddi",
+sec: "0.6",
+region: "Derelik"
+},
+30000052: {
+system: "Maspah",
+sec: "0.8",
+region: "Derelik"
+},
+30000053: {
+system: "Ibaria",
+sec: "0.7",
+region: "Derelik"
+},
+30000054: {
+system: "Shala",
+sec: "0.7",
+region: "Derelik"
+},
+30000055: {
+system: "Zemalu",
+sec: "0.7",
+region: "Derelik"
+},
+30000056: {
+system: "Khankenirdia",
+sec: "0.6",
+region: "Derelik"
+},
+30000057: {
+system: "Nikh",
+sec: "0.8",
+region: "Derelik"
+},
+30000058: {
+system: "Amphar",
+sec: "0.7",
+region: "Derelik"
+},
+30000059: {
+system: "Salashayama",
+sec: "0.7",
+region: "Derelik"
+},
+30000060: {
+system: "Janus",
+sec: "0.5",
+region: "Derelik"
+},
+30000061: {
+system: "Agha",
+sec: "0.7",
+region: "Derelik"
+},
+30000063: {
+system: "Orva",
+sec: "0.5",
+region: "Derelik"
+},
+30000064: {
+system: "Zet",
+sec: "0.6",
+region: "Derelik"
+},
+30000066: {
+system: "Pirohdim",
+sec: "0.6",
+region: "Derelik"
+},
+30000068: {
+system: "Usroh",
+sec: "0.6",
+region: "Derelik"
+},
+30000069: {
+system: "Thiarer",
+sec: "0.5",
+region: "Derelik"
+},
+30000071: {
+system: "Jangar",
+sec: "0.5",
+region: "Derelik"
+},
+30000076: {
+system: "Tidacha",
+sec: "0.8",
+region: "Derelik"
+},
+30000077: {
+system: "Odlib",
+sec: "0.8",
+region: "Derelik"
+},
+30000078: {
+system: "Jofan",
+sec: "0.8",
+region: "Derelik"
+},
+30000079: {
+system: "Milu",
+sec: "0.8",
+region: "Derelik"
+},
+30000080: {
+system: "Yadi",
+sec: "0.8",
+region: "Derelik"
+},
+30000081: {
+system: "Buftiar",
+sec: "0.7",
+region: "Derelik"
+},
+30000082: {
+system: "Jarizza",
+sec: "0.8",
+region: "Derelik"
+},
+30000083: {
+system: "Ejahi",
+sec: "0.7",
+region: "Derelik"
+},
+30000084: {
+system: "Asghatil",
+sec: "0.8",
+region: "Derelik"
+},
+30000085: {
+system: "Bar",
+sec: "0.7",
+region: "Derelik"
+},
+30000086: {
+system: "Sucha",
+sec: "0.7",
+region: "Derelik"
+},
+30000087: {
+system: "Gelhan",
+sec: "0.7",
+region: "Derelik"
+},
+30000088: {
+system: "Akeva",
+sec: "0.7",
+region: "Derelik"
+},
+30000103: {
+system: "Serad",
+sec: "0.5",
+region: "Derelik"
+},
+30000106: {
+system: "Shedoo",
+sec: "0.5",
+region: "Derelik"
+},
+30000119: {
+system: "Itamo",
+sec: "0.7",
+region: "The Forge"
+},
+30000120: {
+system: "Mitsolen",
+sec: "0.6",
+region: "The Forge"
+},
+30000121: {
+system: "Jatate",
+sec: "0.6",
+region: "The Forge"
+},
+30000122: {
+system: "Mahtista",
+sec: "0.7",
+region: "The Forge"
+},
+30000123: {
+system: "Vaankalen",
+sec: "0.6",
+region: "The Forge"
+},
+30000124: {
+system: "Kylmabe",
+sec: "0.7",
+region: "The Forge"
+},
+30000125: {
+system: "Ahtulaima",
+sec: "0.6",
+region: "The Forge"
+},
+30000126: {
+system: "Geras",
+sec: "0.7",
+region: "The Forge"
+},
+30000127: {
+system: "Sirseshin",
+sec: "0.7",
+region: "The Forge"
+},
+30000128: {
+system: "Tuuriainas",
+sec: "0.6",
+region: "The Forge"
+},
+30000129: {
+system: "Unpas",
+sec: "0.9",
+region: "The Forge"
+},
+30000130: {
+system: "Shihuken",
+sec: "0.9",
+region: "The Forge"
+},
+30000131: {
+system: "Nomaa",
+sec: "0.6",
+region: "The Forge"
+},
+30000132: {
+system: "Ansila",
+sec: "0.9",
+region: "The Forge"
+},
+30000133: {
+system: "Hirtamon",
+sec: "1.0",
+region: "The Forge"
+},
+30000134: {
+system: "Hykkota",
+sec: "0.8",
+region: "The Forge"
+},
+30000135: {
+system: "Outuni",
+sec: "0.7",
+region: "The Forge"
+},
+30000136: {
+system: "Ohmahailen",
+sec: "0.7",
+region: "The Forge"
+},
+30000137: {
+system: "Eskunen",
+sec: "0.6",
+region: "The Forge"
+},
+30000138: {
+system: "Ikuchi",
+sec: "1.0",
+region: "The Forge"
+},
+30000139: {
+system: "Urlen",
+sec: "1.0",
+region: "The Forge"
+},
+30000140: {
+system: "Maurasi",
+sec: "0.9",
+region: "The Forge"
+},
+30000141: {
+system: "Kisogo",
+sec: "1.0",
+region: "The Forge"
+},
+30000142: {
+system: "Jita",
+sec: "0.9",
+region: "The Forge"
+},
+30000143: {
+system: "Niyabainen",
+sec: "1.0",
+region: "The Forge"
+},
+30000144: {
+system: "Perimeter",
+sec: "1.0",
+region: "The Forge"
+},
+30000145: {
+system: "New Caldari",
+sec: "1.0",
+region: "The Forge"
+},
+30000146: {
+system: "Saisio",
+sec: "0.7",
+region: "The Forge"
+},
+30000147: {
+system: "Abagawa",
+sec: "0.6",
+region: "The Forge"
+},
+30000148: {
+system: "Jakanerva",
+sec: "0.7",
+region: "The Forge"
+},
+30000149: {
+system: "Gekutami",
+sec: "0.7",
+region: "The Forge"
+},
+30000150: {
+system: "Hurtoken",
+sec: "0.6",
+region: "The Forge"
+},
+30000151: {
+system: "Uoyonen",
+sec: "0.7",
+region: "The Forge"
+},
+30000152: {
+system: "Hampinen",
+sec: "0.5",
+region: "The Forge"
+},
+30000153: {
+system: "Poinen",
+sec: "0.6",
+region: "The Forge"
+},
+30000154: {
+system: "Liekuri",
+sec: "0.6",
+region: "The Forge"
+},
+30000155: {
+system: "Obanen",
+sec: "0.6",
+region: "The Forge"
+},
+30000156: {
+system: "Josameto",
+sec: "0.6",
+region: "The Forge"
+},
+30000157: {
+system: "Otela",
+sec: "0.5",
+region: "The Forge"
+},
+30000158: {
+system: "Olo",
+sec: "0.7",
+region: "The Forge"
+},
+30000159: {
+system: "Ikami",
+sec: "0.5",
+region: "The Forge"
+},
+30000160: {
+system: "Reisen",
+sec: "0.5",
+region: "The Forge"
+},
+30000161: {
+system: "Purjola",
+sec: "0.5",
+region: "The Forge"
+},
+30000165: {
+system: "Ishisomo",
+sec: "0.7",
+region: "The Forge"
+},
+30000166: {
+system: "Airmia",
+sec: "0.6",
+region: "The Forge"
+},
+30000167: {
+system: "Sakkikainen",
+sec: "0.6",
+region: "The Forge"
+},
+30000168: {
+system: "Friggi",
+sec: "0.5",
+region: "The Forge"
+},
+30000170: {
+system: "Vahunomi",
+sec: "0.5",
+region: "The Forge"
+},
+30000173: {
+system: "Vattuolen",
+sec: "0.7",
+region: "The Forge"
+},
+30000174: {
+system: "Onuse",
+sec: "0.7",
+region: "The Forge"
+},
+30000175: {
+system: "Soshin",
+sec: "0.6",
+region: "The Forge"
+},
+30000176: {
+system: "Keikaken",
+sec: "0.7",
+region: "The Forge"
+},
+30000177: {
+system: "Ukkalen",
+sec: "0.6",
+region: "The Forge"
+},
+30000178: {
+system: "Akkilen",
+sec: "0.7",
+region: "The Forge"
+},
+30000179: {
+system: "Silen",
+sec: "0.5",
+region: "The Forge"
+},
+30000180: {
+system: "Osmon",
+sec: "0.7",
+region: "The Forge"
+},
+30000181: {
+system: "Korsiki",
+sec: "0.6",
+region: "The Forge"
+},
+30000182: {
+system: "Inaya",
+sec: "0.6",
+region: "The Forge"
+},
+30000183: {
+system: "Nuken",
+sec: "0.8",
+region: "The Forge"
+},
+30000185: {
+system: "Airaken",
+sec: "0.5",
+region: "The Forge"
+},
+30000187: {
+system: "Wuos",
+sec: "0.6",
+region: "The Forge"
+},
+30000188: {
+system: "Hentogaira",
+sec: "0.6",
+region: "The Forge"
+},
+30000189: {
+system: "Kiainti",
+sec: "0.5",
+region: "The Forge"
+},
+30000193: {
+system: "Vouskiaho",
+sec: "0.5",
+region: "The Forge"
+},
+30000317: {
+system: "A3-RQ3",
+sec: "-0.3",
+region: "Vale of the Silent"
+},
+30001357: {
+system: "Antiainen",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001358: {
+system: "Ossa",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001359: {
+system: "Semiki",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001360: {
+system: "Kiskoken",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001362: {
+system: "Veisto",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001363: {
+system: "Sobaseki",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001364: {
+system: "Funtanainen",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001365: {
+system: "Isikemi",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001366: {
+system: "Uosusuokko",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001367: {
+system: "Hageken",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001368: {
+system: "Uemisaisen",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001369: {
+system: "Sotrentaira",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001370: {
+system: "Ouranienen",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001371: {
+system: "Erenta",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001372: {
+system: "Kino",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001374: {
+system: "Iidoken",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001375: {
+system: "Tsuguwa",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001376: {
+system: "Nourvukaiken",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001377: {
+system: "Sarekuwa",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001378: {
+system: "Ekura",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001379: {
+system: "Tunttaras",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001380: {
+system: "Vellaine",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001381: {
+system: "Arvasaras",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001386: {
+system: "Saatuban",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001387: {
+system: "Isikano",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001389: {
+system: "Isanamo",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001391: {
+system: "Piekura",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001392: {
+system: "Amsen",
+sec: "1.0",
+region: "Lonetrek"
+},
+30001393: {
+system: "Malkalen",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001394: {
+system: "Korama",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001395: {
+system: "Ylandoki",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001396: {
+system: "Aakari",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001397: {
+system: "Isseras",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001399: {
+system: "Elonaya",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001401: {
+system: "Nonni",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001403: {
+system: "Piak",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001404: {
+system: "Airkio",
+sec: "0.9",
+region: "Lonetrek"
+},
+30001405: {
+system: "Kakakela",
+sec: "1.0",
+region: "Lonetrek"
+},
+30001406: {
+system: "Kamokor",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001407: {
+system: "Todaki",
+sec: "1.0",
+region: "Lonetrek"
+},
+30001408: {
+system: "Ruvas",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001409: {
+system: "Umokka",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001410: {
+system: "Kirras",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001411: {
+system: "Autama",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001412: {
+system: "Tsukuras",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001413: {
+system: "Nani",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001414: {
+system: "Ajanen",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001415: {
+system: "Kuoka",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001416: {
+system: "Liukikka",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001417: {
+system: "Rauntaka",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001418: {
+system: "Aikantoh",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001421: {
+system: "Otalieto",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001423: {
+system: "Jotenen",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001424: {
+system: "Haajinen",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001425: {
+system: "Oipo",
+sec: "0.8",
+region: "Lonetrek"
+},
+30001426: {
+system: "Isinokka",
+sec: "0.7",
+region: "Lonetrek"
+},
+30001427: {
+system: "Yoma",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001428: {
+system: "Ibura",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001429: {
+system: "Torrinos",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001430: {
+system: "Endatoh",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001431: {
+system: "Aivoli",
+sec: "0.6",
+region: "Lonetrek"
+},
+30001432: {
+system: "Uesuro",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001434: {
+system: "Elanoda",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001443: {
+system: "Vuorrassi",
+sec: "0.5",
+region: "Lonetrek"
+},
+30001644: {
+system: "Tividu",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001645: {
+system: "Tendhyes",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001646: {
+system: "Goram",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001647: {
+system: "Anjedin",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001648: {
+system: "Adahum",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001649: {
+system: "Ahrosseas",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001650: {
+system: "Riramia",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001651: {
+system: "Nafomeh",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001652: {
+system: "Pimsu",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001653: {
+system: "Jarzalad",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001654: {
+system: "Matyas",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001655: {
+system: "Imeshasa",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001656: {
+system: "Ivih",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001657: {
+system: "Seil",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001658: {
+system: "Mani",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001659: {
+system: "Sehmosh",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001660: {
+system: "Dabrid",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001662: {
+system: "Hibi",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001665: {
+system: "Nuzair",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001667: {
+system: "Shousran",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001669: {
+system: "Pimebeka",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001670: {
+system: "Baviasi",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001671: {
+system: "Tash-Murkon Prime",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001672: {
+system: "Emrayur",
+sec: "1.0",
+region: "Tash-Murkon"
+},
+30001673: {
+system: "Shesha",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001674: {
+system: "Hilaban",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001675: {
+system: "Sacalan",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001676: {
+system: "Mimen",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001677: {
+system: "Thashkarai",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001678: {
+system: "Atoosh",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001679: {
+system: "Unkah",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001687: {
+system: "Lossa",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001688: {
+system: "Onazel",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001689: {
+system: "Asesamy",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001690: {
+system: "Hostni",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001691: {
+system: "Mimime",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001692: {
+system: "Kibursha",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001693: {
+system: "Perdan",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001694: {
+system: "Abai",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001695: {
+system: "Nehkiah",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001696: {
+system: "Iro",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001697: {
+system: "Ahkour",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001698: {
+system: "Gaknem",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001699: {
+system: "Siyi",
+sec: "0.5",
+region: "Tash-Murkon"
+},
+30001700: {
+system: "Remoriu",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001701: {
+system: "Yanuel",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001702: {
+system: "Nafrivik",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001703: {
+system: "Taru",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001704: {
+system: "Arkoz",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001705: {
+system: "Azhgabid",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001706: {
+system: "Jinizu",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001707: {
+system: "Phoren",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001708: {
+system: "Asezai",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001709: {
+system: "Ferira",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001710: {
+system: "Yeder",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001711: {
+system: "Azerakish",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001713: {
+system: "Yasud",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001714: {
+system: "Ghishul",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001715: {
+system: "Moutid",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001716: {
+system: "Goni",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001717: {
+system: "Adar",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001718: {
+system: "Paye",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30001722: {
+system: "Marthia",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001723: {
+system: "Assiad",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001724: {
+system: "Rumida",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001725: {
+system: "Nosodnis",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001726: {
+system: "Iswa",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001727: {
+system: "Rand",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001728: {
+system: "Sizamod",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001729: {
+system: "Sinid",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001730: {
+system: "Alra",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001731: {
+system: "Ilas",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001732: {
+system: "Zith",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001733: {
+system: "Tew",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001734: {
+system: "Zehru",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30001735: {
+system: "Uhodoh",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001736: {
+system: "Esa",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001737: {
+system: "Hath",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001738: {
+system: "Judra",
+sec: "0.8",
+region: "Tash-Murkon"
+},
+30001739: {
+system: "Sharios",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001740: {
+system: "Arakor",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001741: {
+system: "Ahteer",
+sec: "0.7",
+region: "Tash-Murkon"
+},
+30001742: {
+system: "Kari",
+sec: "0.6",
+region: "Tash-Murkon"
+},
+30002048: {
+system: "Bei",
+sec: "0.6",
+region: "Metropolis"
+},
+30002049: {
+system: "Uttindar",
+sec: "0.5",
+region: "Metropolis"
+},
+30002053: {
+system: "Hek",
+sec: "0.5",
+region: "Metropolis"
+},
+30002054: {
+system: "Hror",
+sec: "0.5",
+region: "Metropolis"
+},
+30002068: {
+system: "Nakugard",
+sec: "0.5",
+region: "Metropolis"
+},
+30002069: {
+system: "Traun",
+sec: "0.6",
+region: "Metropolis"
+},
+30002070: {
+system: "Uriok",
+sec: "0.5",
+region: "Metropolis"
+},
+30002071: {
+system: "Barkrik",
+sec: "0.6",
+region: "Metropolis"
+},
+30002072: {
+system: "Inder",
+sec: "0.5",
+region: "Metropolis"
+},
+30002075: {
+system: "Hjoramold",
+sec: "0.5",
+region: "Metropolis"
+},
+30002187: {
+system: "Amarr",
+sec: "1.0",
+region: "Domain"
+},
+30002188: {
+system: "Boranai",
+sec: "0.9",
+region: "Domain"
+},
+30002189: {
+system: "Hedion",
+sec: "1.0",
+region: "Domain"
+},
+30002190: {
+system: "Mabnen",
+sec: "0.9",
+region: "Domain"
+},
+30002191: {
+system: "Toshabia",
+sec: "0.8",
+region: "Domain"
+},
+30002192: {
+system: "Irnin",
+sec: "0.7",
+region: "Domain"
+},
+30002193: {
+system: "Kehour",
+sec: "0.9",
+region: "Domain"
+},
+30002194: {
+system: "Martha",
+sec: "0.7",
+region: "Domain"
+},
+30002195: {
+system: "Simbeloud",
+sec: "0.9",
+region: "Domain"
+},
+30002196: {
+system: "Ebidan",
+sec: "0.9",
+region: "Domain"
+},
+30002197: {
+system: "Akhragan",
+sec: "0.8",
+region: "Domain"
+},
+30002198: {
+system: "Mikhir",
+sec: "0.7",
+region: "Domain"
+},
+30002199: {
+system: "Bashakru",
+sec: "0.6",
+region: "Domain"
+},
+30002200: {
+system: "Sukirah",
+sec: "0.6",
+region: "Domain"
+},
+30002203: {
+system: "Ziona",
+sec: "0.6",
+region: "Domain"
+},
+30002204: {
+system: "Gaha",
+sec: "0.7",
+region: "Domain"
+},
+30002205: {
+system: "Armala",
+sec: "0.8",
+region: "Domain"
+},
+30002206: {
+system: "Murema",
+sec: "0.7",
+region: "Domain"
+},
+30002207: {
+system: "Cailanar",
+sec: "0.7",
+region: "Domain"
+},
+30002208: {
+system: "Ilonarav",
+sec: "0.8",
+region: "Domain"
+},
+30002209: {
+system: "Uchat",
+sec: "0.7",
+region: "Domain"
+},
+30002210: {
+system: "Joppaya",
+sec: "0.5",
+region: "Domain"
+},
+30002211: {
+system: "Pelkia",
+sec: "0.5",
+region: "Domain"
+},
+30002212: {
+system: "Raren",
+sec: "0.5",
+region: "Domain"
+},
+30002217: {
+system: "Hutian",
+sec: "0.5",
+region: "Domain"
+},
+30002218: {
+system: "Noli",
+sec: "0.6",
+region: "Domain"
+},
+30002220: {
+system: "Aghesi",
+sec: "0.8",
+region: "Domain"
+},
+30002221: {
+system: "Fabin",
+sec: "0.7",
+region: "Domain"
+},
+30002222: {
+system: "Airshaz",
+sec: "0.7",
+region: "Domain"
+},
+30002223: {
+system: "Patzcha",
+sec: "0.7",
+region: "Domain"
+},
+30002224: {
+system: "Charra",
+sec: "0.8",
+region: "Domain"
+},
+30002225: {
+system: "Harva",
+sec: "0.8",
+region: "Domain"
+},
+30002226: {
+system: "Thebeka",
+sec: "0.9",
+region: "Domain"
+},
+30002227: {
+system: "Rasile",
+sec: "0.9",
+region: "Domain"
+},
+30002228: {
+system: "Nererut",
+sec: "0.8",
+region: "Domain"
+},
+30002229: {
+system: "Sitanan",
+sec: "0.8",
+region: "Domain"
+},
+30002230: {
+system: "Vashkah",
+sec: "0.7",
+region: "Domain"
+},
+30002231: {
+system: "Ardishapur Prime",
+sec: "0.7",
+region: "Domain"
+},
+30002232: {
+system: "Gid",
+sec: "0.7",
+region: "Domain"
+},
+30002233: {
+system: "Dakba",
+sec: "0.7",
+region: "Domain"
+},
+30002234: {
+system: "Nifshed",
+sec: "0.7",
+region: "Domain"
+},
+30002235: {
+system: "Shumam",
+sec: "0.7",
+region: "Domain"
+},
+30002242: {
+system: "Mamenkhanar",
+sec: "0.7",
+region: "Domain"
+},
+30002243: {
+system: "Seiradih",
+sec: "0.6",
+region: "Domain"
+},
+30002244: {
+system: "Arera",
+sec: "0.6",
+region: "Domain"
+},
+30002245: {
+system: "Hizhara",
+sec: "0.6",
+region: "Domain"
+},
+30002247: {
+system: "Ahala",
+sec: "0.5",
+region: "Domain"
+},
+30002248: {
+system: "Knophtikoo",
+sec: "0.7",
+region: "Domain"
+},
+30002250: {
+system: "Hai",
+sec: "0.5",
+region: "Domain"
+},
+30002251: {
+system: "Sadye",
+sec: "0.6",
+region: "Domain"
+},
+30002253: {
+system: "Arshat",
+sec: "0.6",
+region: "Domain"
+},
+30002257: {
+system: "Moussou",
+sec: "0.8",
+region: "Domain"
+},
+30002258: {
+system: "Nadohman",
+sec: "0.7",
+region: "Domain"
+},
+30002259: {
+system: "Sahdil",
+sec: "0.7",
+region: "Domain"
+},
+30002260: {
+system: "Esteban",
+sec: "0.6",
+region: "Domain"
+},
+30002261: {
+system: "Luromooh",
+sec: "0.6",
+region: "Domain"
+},
+30002262: {
+system: "Nalu",
+sec: "0.6",
+region: "Domain"
+},
+30002263: {
+system: "Jarshitsan",
+sec: "0.6",
+region: "Domain"
+},
+30002264: {
+system: "Hadonoo",
+sec: "0.6",
+region: "Domain"
+},
+30002265: {
+system: "Azizora",
+sec: "0.6",
+region: "Domain"
+},
+30002266: {
+system: "Ahmak",
+sec: "0.6",
+region: "Domain"
+},
+30002267: {
+system: "Shabura",
+sec: "0.7",
+region: "Domain"
+},
+30002268: {
+system: "Adia",
+sec: "0.7",
+region: "Domain"
+},
+30002269: {
+system: "Ebo",
+sec: "0.5",
+region: "Domain"
+},
+30002276: {
+system: "Isamm",
+sec: "0.7",
+region: "Domain"
+},
+30002277: {
+system: "Ebtesham",
+sec: "0.7",
+region: "Domain"
+},
+30002278: {
+system: "Artoun",
+sec: "0.8",
+region: "Domain"
+},
+30002279: {
+system: "Safizon",
+sec: "0.8",
+region: "Domain"
+},
+30002280: {
+system: "Zatsyaki",
+sec: "0.9",
+region: "Domain"
+},
+30002281: {
+system: "Eba",
+sec: "0.9",
+region: "Domain"
+},
+30002282: {
+system: "Bhizheba",
+sec: "1.0",
+region: "Domain"
+},
+30002383: {
+system: "Aeddin",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002385: {
+system: "Teonusude",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002386: {
+system: "Gelfiven",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002397: {
+system: "Horaka",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002398: {
+system: "Eldulf",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002399: {
+system: "Orien",
+sec: "0.8",
+region: "Molden Heath"
+},
+30002400: {
+system: "Varigne",
+sec: "0.6",
+region: "Molden Heath"
+},
+30002408: {
+system: "Fegomenko",
+sec: "0.5",
+region: "Molden Heath"
+},
+30002416: {
+system: "Kattegaud",
+sec: "0.7",
+region: "Molden Heath"
+},
+30002505: {
+system: "Hulm",
+sec: "1.0",
+region: "Heimatar"
+},
+30002506: {
+system: "Osoggur",
+sec: "0.5",
+region: "Heimatar"
+},
+30002507: {
+system: "Abudban",
+sec: "0.7",
+region: "Heimatar"
+},
+30002508: {
+system: "Trytedald",
+sec: "0.9",
+region: "Heimatar"
+},
+30002509: {
+system: "Odatrik",
+sec: "0.8",
+region: "Heimatar"
+},
+30002510: {
+system: "Rens",
+sec: "0.9",
+region: "Heimatar"
+},
+30002511: {
+system: "Ameinaka",
+sec: "1.0",
+region: "Heimatar"
+},
+30002512: {
+system: "Alakgur",
+sec: "0.6",
+region: "Heimatar"
+},
+30002518: {
+system: "Edmalbrurdus",
+sec: "1.0",
+region: "Heimatar"
+},
+30002519: {
+system: "Kronsur",
+sec: "0.9",
+region: "Heimatar"
+},
+30002520: {
+system: "Dumkirinur",
+sec: "0.7",
+region: "Heimatar"
+},
+30002521: {
+system: "Sist",
+sec: "0.8",
+region: "Heimatar"
+},
+30002522: {
+system: "Obrolber",
+sec: "0.6",
+region: "Heimatar"
+},
+30002523: {
+system: "Austraka",
+sec: "0.8",
+region: "Heimatar"
+},
+30002524: {
+system: "Ivar",
+sec: "1.0",
+region: "Heimatar"
+},
+30002525: {
+system: "Meirakulf",
+sec: "0.9",
+region: "Heimatar"
+},
+30002526: {
+system: "Frarn",
+sec: "0.8",
+region: "Heimatar"
+},
+30002527: {
+system: "Illinfrik",
+sec: "0.8",
+region: "Heimatar"
+},
+30002528: {
+system: "Balginia",
+sec: "0.8",
+region: "Heimatar"
+},
+30002529: {
+system: "Gyng",
+sec: "0.8",
+region: "Heimatar"
+},
+30002530: {
+system: "Avesber",
+sec: "0.8",
+region: "Heimatar"
+},
+30002531: {
+system: "Gerek",
+sec: "0.7",
+region: "Heimatar"
+},
+30002532: {
+system: "Tongofur",
+sec: "0.6",
+region: "Heimatar"
+},
+30002533: {
+system: "Gerbold",
+sec: "0.8",
+region: "Heimatar"
+},
+30002534: {
+system: "Rokofur",
+sec: "0.6",
+region: "Heimatar"
+},
+30002535: {
+system: "Ebasgerdur",
+sec: "0.8",
+region: "Heimatar"
+},
+30002543: {
+system: "Eystur",
+sec: "0.9",
+region: "Heimatar"
+},
+30002544: {
+system: "Pator",
+sec: "1.0",
+region: "Heimatar"
+},
+30002545: {
+system: "Lustrevik",
+sec: "0.9",
+region: "Heimatar"
+},
+30002546: {
+system: "Isendeldik",
+sec: "0.8",
+region: "Heimatar"
+},
+30002547: {
+system: "Ammold",
+sec: "1.0",
+region: "Heimatar"
+},
+30002548: {
+system: "Emolgranlan",
+sec: "0.5",
+region: "Heimatar"
+},
+30002549: {
+system: "Offugen",
+sec: "0.6",
+region: "Heimatar"
+},
+30002550: {
+system: "Roniko",
+sec: "0.6",
+region: "Heimatar"
+},
+30002552: {
+system: "Eddar",
+sec: "0.6",
+region: "Heimatar"
+},
+30002558: {
+system: "Endrulf",
+sec: "0.6",
+region: "Heimatar"
+},
+30002562: {
+system: "Trer",
+sec: "0.7",
+region: "Heimatar"
+},
+30002563: {
+system: "Egmur",
+sec: "0.7",
+region: "Heimatar"
+},
+30002564: {
+system: "Javrendei",
+sec: "0.9",
+region: "Heimatar"
+},
+30002565: {
+system: "Appen",
+sec: "0.8",
+region: "Heimatar"
+},
+30002566: {
+system: "Klir",
+sec: "0.8",
+region: "Heimatar"
+},
+30002567: {
+system: "Jorus",
+sec: "0.7",
+region: "Heimatar"
+},
+30002568: {
+system: "Onga",
+sec: "1.0",
+region: "Heimatar"
+},
+30002569: {
+system: "Osaumuni",
+sec: "0.9",
+region: "Heimatar"
+},
+30002570: {
+system: "Magiko",
+sec: "0.9",
+region: "Heimatar"
+},
+30002571: {
+system: "Oremmulf",
+sec: "0.9",
+region: "Heimatar"
+},
+30002572: {
+system: "Hurjafren",
+sec: "0.9",
+region: "Heimatar"
+},
+30002573: {
+system: "Vullat",
+sec: "1.0",
+region: "Heimatar"
+},
+30002632: {
+system: "Pettinck",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002633: {
+system: "Du Annes",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002636: {
+system: "Grinacanne",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002637: {
+system: "Metserel",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002639: {
+system: "Adreland",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002640: {
+system: "Erme",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002641: {
+system: "Aufay",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002642: {
+system: "Iyen-Oursta",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002643: {
+system: "Faurent",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002644: {
+system: "Ambeke",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002646: {
+system: "Direrie",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002648: {
+system: "Ardene",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002649: {
+system: "Boillair",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002655: {
+system: "Vylade",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002656: {
+system: "Auvergne",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002657: {
+system: "Aunia",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002658: {
+system: "Agrallarier",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002659: {
+system: "Dodixie",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002660: {
+system: "Eglennaert",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002661: {
+system: "Botane",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002662: {
+system: "Pulin",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002663: {
+system: "Foves",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002664: {
+system: "Alles",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002665: {
+system: "Misneden",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002667: {
+system: "Chelien",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002668: {
+system: "Trosquesere",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002669: {
+system: "Ansone",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002670: {
+system: "Dunraelare",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002671: {
+system: "Nausschie",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002672: {
+system: "Inghenges",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002673: {
+system: "Estene",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002674: {
+system: "Gallareue",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002675: {
+system: "Stayme",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002676: {
+system: "Parchanier",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002677: {
+system: "Fluekele",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002678: {
+system: "Alsottobier",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002679: {
+system: "Jolia",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002680: {
+system: "Augnais",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002681: {
+system: "Deltole",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002682: {
+system: "Colelie",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002685: {
+system: "Dodenvale",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002688: {
+system: "Chainelant",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002689: {
+system: "Sileperer",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002692: {
+system: "Jel",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002695: {
+system: "Ation",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002699: {
+system: "Brapelille",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002700: {
+system: "Bawilan",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002701: {
+system: "Atier",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002703: {
+system: "Brybier",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002705: {
+system: "Croleur",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002706: {
+system: "Doussivitte",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002707: {
+system: "Unel",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002708: {
+system: "Claysson",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002709: {
+system: "Auberulle",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002710: {
+system: "Adiere",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002711: {
+system: "Stetille",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002712: {
+system: "Alillere",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002713: {
+system: "Abenync",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002714: {
+system: "Pozirblant",
+sec: "0.7",
+region: "Sinq Laison"
+},
+30002715: {
+system: "Bourynes",
+sec: "1.0",
+region: "Sinq Laison"
+},
+30002716: {
+system: "Aurcel",
+sec: "0.5",
+region: "Sinq Laison"
+},
+30002717: {
+system: "Aymaerne",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002724: {
+system: "Assiettes",
+sec: "0.6",
+region: "Sinq Laison"
+},
+30002731: {
+system: "Vittenyn",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30002732: {
+system: "Mirilene",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002733: {
+system: "Pucherie",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002734: {
+system: "Fricoure",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002735: {
+system: "Caretyn",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002736: {
+system: "Ainaille",
+sec: "0.8",
+region: "Sinq Laison"
+},
+30002737: {
+system: "Konola",
+sec: "0.7",
+region: "The Citadel"
+},
+30002738: {
+system: "Inoue",
+sec: "0.6",
+region: "The Citadel"
+},
+30002739: {
+system: "Isaziwa",
+sec: "0.7",
+region: "The Citadel"
+},
+30002740: {
+system: "Eitu",
+sec: "0.5",
+region: "The Citadel"
+},
+30002743: {
+system: "Ohvosamon",
+sec: "0.7",
+region: "The Citadel"
+},
+30002744: {
+system: "Auviken",
+sec: "0.8",
+region: "The Citadel"
+},
+30002745: {
+system: "Saikanen",
+sec: "0.9",
+region: "The Citadel"
+},
+30002746: {
+system: "Oijamon",
+sec: "0.8",
+region: "The Citadel"
+},
+30002747: {
+system: "Kakki",
+sec: "0.8",
+region: "The Citadel"
+},
+30002748: {
+system: "Jeras",
+sec: "0.6",
+region: "The Citadel"
+},
+30002749: {
+system: "Kausaaja",
+sec: "0.7",
+region: "The Citadel"
+},
+30002750: {
+system: "Oiniken",
+sec: "0.7",
+region: "The Citadel"
+},
+30002751: {
+system: "Kaimon",
+sec: "0.7",
+region: "The Citadel"
+},
+30002752: {
+system: "Ahynada",
+sec: "0.8",
+region: "The Citadel"
+},
+30002753: {
+system: "Aikoro",
+sec: "0.8",
+region: "The Citadel"
+},
+30002754: {
+system: "Alikara",
+sec: "0.7",
+region: "The Citadel"
+},
+30002755: {
+system: "Usi",
+sec: "0.5",
+region: "The Citadel"
+},
+30002761: {
+system: "Kassigainen",
+sec: "0.9",
+region: "The Citadel"
+},
+30002762: {
+system: "Yashunen",
+sec: "1.0",
+region: "The Citadel"
+},
+30002763: {
+system: "Tennen",
+sec: "0.9",
+region: "The Citadel"
+},
+30002764: {
+system: "Hatakani",
+sec: "0.9",
+region: "The Citadel"
+},
+30002765: {
+system: "Sivala",
+sec: "0.6",
+region: "The Citadel"
+},
+30002766: {
+system: "Iivinen",
+sec: "0.7",
+region: "The Citadel"
+},
+30002768: {
+system: "Uedama",
+sec: "0.5",
+region: "The Citadel"
+},
+30002772: {
+system: "Rairomon",
+sec: "0.6",
+region: "The Citadel"
+},
+30002773: {
+system: "Hogimo",
+sec: "0.6",
+region: "The Citadel"
+},
+30002774: {
+system: "Huttaken",
+sec: "0.6",
+region: "The Citadel"
+},
+30002775: {
+system: "Paara",
+sec: "0.8",
+region: "The Citadel"
+},
+30002776: {
+system: "Annaro",
+sec: "0.8",
+region: "The Citadel"
+},
+30002777: {
+system: "Isutaka",
+sec: "0.8",
+region: "The Citadel"
+},
+30002778: {
+system: "Tasabeshi",
+sec: "0.8",
+region: "The Citadel"
+},
+30002779: {
+system: "Ono",
+sec: "0.8",
+region: "The Citadel"
+},
+30002780: {
+system: "Muvolailen",
+sec: "0.7",
+region: "The Citadel"
+},
+30002781: {
+system: "Halaima",
+sec: "0.7",
+region: "The Citadel"
+},
+30002782: {
+system: "Kamio",
+sec: "0.7",
+region: "The Citadel"
+},
+30002783: {
+system: "Sankkasen",
+sec: "0.7",
+region: "The Citadel"
+},
+30002784: {
+system: "Tintoh",
+sec: "0.8",
+region: "The Citadel"
+},
+30002785: {
+system: "Santola",
+sec: "0.8",
+region: "The Citadel"
+},
+30002786: {
+system: "Ikao",
+sec: "0.6",
+region: "The Citadel"
+},
+30002787: {
+system: "Waira",
+sec: "0.5",
+region: "The Citadel"
+},
+30002788: {
+system: "Inaro",
+sec: "0.8",
+region: "The Citadel"
+},
+30002789: {
+system: "Kaaputenen",
+sec: "0.8",
+region: "The Citadel"
+},
+30002790: {
+system: "Waskisen",
+sec: "0.7",
+region: "The Citadel"
+},
+30002791: {
+system: "Sirppala",
+sec: "0.9",
+region: "The Citadel"
+},
+30002792: {
+system: "Irjunen",
+sec: "0.5",
+region: "The Citadel"
+},
+30002794: {
+system: "Yria",
+sec: "0.5",
+region: "The Citadel"
+},
+30002798: {
+system: "Venilen",
+sec: "0.6",
+region: "The Citadel"
+},
+30002799: {
+system: "Oisio",
+sec: "0.5",
+region: "The Citadel"
+},
+30002800: {
+system: "Haatomo",
+sec: "0.6",
+region: "The Citadel"
+},
+30002801: {
+system: "Suroken",
+sec: "0.7",
+region: "The Citadel"
+},
+30002802: {
+system: "Kusomonmon",
+sec: "0.8",
+region: "The Citadel"
+},
+30002803: {
+system: "Juunigaishi",
+sec: "0.6",
+region: "The Citadel"
+},
+30002804: {
+system: "Isikesu",
+sec: "0.7",
+region: "The Citadel"
+},
+30002805: {
+system: "Anttiri",
+sec: "0.7",
+region: "The Citadel"
+},
+30002814: {
+system: "Uotila",
+sec: "0.6",
+region: "The Citadel"
+},
+30002815: {
+system: "Isenairos",
+sec: "0.8",
+region: "The Citadel"
+},
+30002816: {
+system: "Saila",
+sec: "0.9",
+region: "The Citadel"
+},
+30002818: {
+system: "Oichiya",
+sec: "0.8",
+region: "The Citadel"
+},
+30002819: {
+system: "Motsu",
+sec: "0.9",
+region: "The Citadel"
+},
+30002963: {
+system: "Odin",
+sec: "0.6",
+region: "Devoid"
+},
+30002964: {
+system: "Esescama",
+sec: "0.6",
+region: "Devoid"
+},
+30002965: {
+system: "Choonka",
+sec: "0.6",
+region: "Devoid"
+},
+30002966: {
+system: "Thasinaz",
+sec: "0.6",
+region: "Devoid"
+},
+30002967: {
+system: "Dihra",
+sec: "0.6",
+region: "Devoid"
+},
+30002969: {
+system: "Eredan",
+sec: "0.7",
+region: "Devoid"
+},
+30002970: {
+system: "Ohide",
+sec: "0.6",
+region: "Devoid"
+},
+30002971: {
+system: "Sasoutikh",
+sec: "0.6",
+region: "Devoid"
+},
+30002972: {
+system: "Gheth",
+sec: "0.6",
+region: "Devoid"
+},
+30002973: {
+system: "Lisudeh",
+sec: "0.8",
+region: "Devoid"
+},
+30002974: {
+system: "Mehatoor",
+sec: "0.7",
+region: "Devoid"
+},
+30002986: {
+system: "Mendori",
+sec: "0.5",
+region: "Devoid"
+},
+30002988: {
+system: "Nakatre",
+sec: "0.6",
+region: "Devoid"
+},
+30002989: {
+system: "Laddiaha",
+sec: "0.7",
+region: "Devoid"
+},
+30002990: {
+system: "Hakshma",
+sec: "0.6",
+region: "Devoid"
+},
+30002991: {
+system: "Uadelah",
+sec: "0.8",
+region: "Devoid"
+},
+30002992: {
+system: "Akes",
+sec: "0.8",
+region: "Devoid"
+},
+30002993: {
+system: "Riavayed",
+sec: "0.6",
+region: "Devoid"
+},
+30002994: {
+system: "Hati",
+sec: "0.8",
+region: "Devoid"
+},
+30002995: {
+system: "Naeel",
+sec: "0.6",
+region: "Devoid"
+},
+30002996: {
+system: "Lower Debyl",
+sec: "0.6",
+region: "Devoid"
+},
+30002997: {
+system: "Ehnoum",
+sec: "0.6",
+region: "Devoid"
+},
+30002998: {
+system: "Upper Debyl",
+sec: "0.7",
+region: "Devoid"
+},
+30003001: {
+system: "Mili",
+sec: "0.6",
+region: "Devoid"
+},
+30003002: {
+system: "Faktun",
+sec: "0.6",
+region: "Devoid"
+},
+30003003: {
+system: "Halenan",
+sec: "0.6",
+region: "Devoid"
+},
+30003004: {
+system: "Ulerah",
+sec: "0.7",
+region: "Devoid"
+},
+30003005: {
+system: "Uktiad",
+sec: "0.6",
+region: "Devoid"
+},
+30003006: {
+system: "Nidebora",
+sec: "0.8",
+region: "Devoid"
+},
+30003007: {
+system: "Arveyil",
+sec: "0.5",
+region: "Devoid"
+},
+30003009: {
+system: "Arnatele",
+sec: "0.6",
+region: "Everyshore"
+},
+30003010: {
+system: "Halle",
+sec: "0.7",
+region: "Everyshore"
+},
+30003011: {
+system: "Mormoen",
+sec: "0.7",
+region: "Everyshore"
+},
+30003012: {
+system: "Amattens",
+sec: "0.6",
+region: "Everyshore"
+},
+30003013: {
+system: "Jurlesel",
+sec: "0.6",
+region: "Everyshore"
+},
+30003014: {
+system: "Bereye",
+sec: "0.7",
+region: "Everyshore"
+},
+30003015: {
+system: "Aice",
+sec: "0.7",
+region: "Everyshore"
+},
+30003016: {
+system: "Junsoraert",
+sec: "0.5",
+region: "Everyshore"
+},
+30003017: {
+system: "Harerget",
+sec: "0.8",
+region: "Everyshore"
+},
+30003018: {
+system: "Azer",
+sec: "0.7",
+region: "Everyshore"
+},
+30003019: {
+system: "Cherore",
+sec: "0.7",
+region: "Everyshore"
+},
+30003020: {
+system: "Torvi",
+sec: "0.5",
+region: "Everyshore"
+},
+30003021: {
+system: "Mosson",
+sec: "0.7",
+region: "Everyshore"
+},
+30003024: {
+system: "Marosier",
+sec: "0.6",
+region: "Everyshore"
+},
+30003025: {
+system: "Lirsautton",
+sec: "0.8",
+region: "Everyshore"
+},
+30003026: {
+system: "Blameston",
+sec: "1.0",
+region: "Everyshore"
+},
+30003027: {
+system: "Vaurent",
+sec: "0.6",
+region: "Everyshore"
+},
+30003028: {
+system: "Aclan",
+sec: "0.5",
+region: "Everyshore"
+},
+30003029: {
+system: "Jaschercis",
+sec: "0.6",
+region: "Everyshore"
+},
+30003030: {
+system: "Ardallabier",
+sec: "0.7",
+region: "Everyshore"
+},
+30003031: {
+system: "Athinard",
+sec: "1.0",
+region: "Everyshore"
+},
+30003032: {
+system: "Meves",
+sec: "1.0",
+region: "Everyshore"
+},
+30003033: {
+system: "Ethernity",
+sec: "0.9",
+region: "Everyshore"
+},
+30003034: {
+system: "Mattere",
+sec: "1.0",
+region: "Everyshore"
+},
+30003035: {
+system: "Gicodel",
+sec: "0.9",
+region: "Everyshore"
+},
+30003036: {
+system: "Frarolle",
+sec: "0.8",
+region: "Everyshore"
+},
+30003037: {
+system: "Quier",
+sec: "0.7",
+region: "Everyshore"
+},
+30003038: {
+system: "Atlanins",
+sec: "0.6",
+region: "Everyshore"
+},
+30003039: {
+system: "Leremblompes",
+sec: "0.6",
+region: "Everyshore"
+},
+30003040: {
+system: "Bille",
+sec: "0.5",
+region: "Everyshore"
+},
+30003041: {
+system: "Colcer",
+sec: "0.9",
+region: "Everyshore"
+},
+30003043: {
+system: "Uphene",
+sec: "0.6",
+region: "Everyshore"
+},
+30003045: {
+system: "Enedore",
+sec: "0.6",
+region: "Everyshore"
+},
+30003046: {
+system: "Angymonne",
+sec: "0.6",
+region: "Everyshore"
+},
+30003047: {
+system: "Averon",
+sec: "0.6",
+region: "Everyshore"
+},
+30003048: {
+system: "Carirgnottin",
+sec: "0.6",
+region: "Everyshore"
+},
+30003049: {
+system: "Laic",
+sec: "0.8",
+region: "Everyshore"
+},
+30003050: {
+system: "Odixie",
+sec: "0.6",
+region: "Everyshore"
+},
+30003051: {
+system: "Antollare",
+sec: "0.7",
+region: "Everyshore"
+},
+30003052: {
+system: "Tolle",
+sec: "0.7",
+region: "Everyshore"
+},
+30003053: {
+system: "Avele",
+sec: "0.7",
+region: "Everyshore"
+},
+30003054: {
+system: "Scuelazyns",
+sec: "0.6",
+region: "Everyshore"
+},
+30003055: {
+system: "Aydoteaux",
+sec: "0.7",
+region: "Everyshore"
+},
+30003056: {
+system: "Muer",
+sec: "0.6",
+region: "Everyshore"
+},
+30003058: {
+system: "Olide",
+sec: "0.7",
+region: "Everyshore"
+},
+30003065: {
+system: "Otelen",
+sec: "0.8",
+region: "The Bleak Lands"
+},
+30003066: {
+system: "Kuomi",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003074: {
+system: "Sasiekko",
+sec: "0.5",
+region: "The Bleak Lands"
+},
+30003078: {
+system: "Erkinen",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003080: {
+system: "Jarkkolen",
+sec: "0.8",
+region: "The Bleak Lands"
+},
+30003081: {
+system: "Ronne",
+sec: "0.7",
+region: "The Bleak Lands"
+},
+30003082: {
+system: "Hatori",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003083: {
+system: "Junsen",
+sec: "0.8",
+region: "The Bleak Lands"
+},
+30003085: {
+system: "Hakodan",
+sec: "0.7",
+region: "The Bleak Lands"
+},
+30003092: {
+system: "Komaa",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003095: {
+system: "Furskeshin",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003096: {
+system: "Kurmaru",
+sec: "0.6",
+region: "The Bleak Lands"
+},
+30003097: {
+system: "Satalama",
+sec: "0.7",
+region: "The Bleak Lands"
+},
+30003374: {
+system: "Arlulf",
+sec: "1.0",
+region: "Metropolis"
+},
+30003375: {
+system: "Brundakur",
+sec: "0.9",
+region: "Metropolis"
+},
+30003376: {
+system: "Stirht",
+sec: "0.9",
+region: "Metropolis"
+},
+30003377: {
+system: "Illuin",
+sec: "0.9",
+region: "Metropolis"
+},
+30003378: {
+system: "Nedegulf",
+sec: "0.8",
+region: "Metropolis"
+},
+30003379: {
+system: "Aldilur",
+sec: "0.9",
+region: "Metropolis"
+},
+30003380: {
+system: "Alf",
+sec: "1.0",
+region: "Metropolis"
+},
+30003381: {
+system: "Eust",
+sec: "0.7",
+region: "Metropolis"
+},
+30003382: {
+system: "Flost",
+sec: "0.7",
+region: "Metropolis"
+},
+30003383: {
+system: "Todrir",
+sec: "1.0",
+region: "Metropolis"
+},
+30003384: {
+system: "Asgeir",
+sec: "0.7",
+region: "Metropolis"
+},
+30003385: {
+system: "Evuldgenzo",
+sec: "0.7",
+region: "Metropolis"
+},
+30003386: {
+system: "Ongund",
+sec: "0.6",
+region: "Metropolis"
+},
+30003387: {
+system: "Jondik",
+sec: "0.9",
+region: "Metropolis"
+},
+30003388: {
+system: "Olbra",
+sec: "0.9",
+region: "Metropolis"
+},
+30003389: {
+system: "Altrinur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003390: {
+system: "Vilur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003391: {
+system: "Reset",
+sec: "0.7",
+region: "Metropolis"
+},
+30003392: {
+system: "Eygfe",
+sec: "0.7",
+region: "Metropolis"
+},
+30003393: {
+system: "Eiluvodi",
+sec: "0.8",
+region: "Metropolis"
+},
+30003394: {
+system: "Freatlidur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003395: {
+system: "Roleinn",
+sec: "0.9",
+region: "Metropolis"
+},
+30003396: {
+system: "Maturat",
+sec: "0.8",
+region: "Metropolis"
+},
+30003397: {
+system: "Bongveber",
+sec: "0.9",
+region: "Metropolis"
+},
+30003398: {
+system: "Anbald",
+sec: "0.7",
+region: "Metropolis"
+},
+30003399: {
+system: "Vorsk",
+sec: "0.6",
+region: "Metropolis"
+},
+30003400: {
+system: "Hjortur",
+sec: "0.9",
+region: "Metropolis"
+},
+30003401: {
+system: "Egbonbet",
+sec: "0.9",
+region: "Metropolis"
+},
+30003402: {
+system: "Totkubad",
+sec: "0.9",
+region: "Metropolis"
+},
+30003403: {
+system: "Meimungen",
+sec: "0.9",
+region: "Metropolis"
+},
+30003404: {
+system: "Agtver",
+sec: "0.9",
+region: "Metropolis"
+},
+30003405: {
+system: "Datulen",
+sec: "0.9",
+region: "Metropolis"
+},
+30003406: {
+system: "Situner",
+sec: "0.8",
+region: "Metropolis"
+},
+30003407: {
+system: "Tamekamur",
+sec: "0.9",
+region: "Metropolis"
+},
+30003408: {
+system: "Evettullur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003409: {
+system: "Leurtmar",
+sec: "1.0",
+region: "Metropolis"
+},
+30003410: {
+system: "Ryddinjorn",
+sec: "1.0",
+region: "Metropolis"
+},
+30003411: {
+system: "Arlek",
+sec: "1.0",
+region: "Metropolis"
+},
+30003412: {
+system: "Elgoi",
+sec: "0.9",
+region: "Metropolis"
+},
+30003413: {
+system: "Eram",
+sec: "0.8",
+region: "Metropolis"
+},
+30003414: {
+system: "Yrmori",
+sec: "0.6",
+region: "Metropolis"
+},
+30003415: {
+system: "Aldagolf",
+sec: "0.6",
+region: "Metropolis"
+},
+30003416: {
+system: "Aldrat",
+sec: "0.6",
+region: "Metropolis"
+},
+30003417: {
+system: "Urnhard",
+sec: "0.6",
+region: "Metropolis"
+},
+30003418: {
+system: "Hardbako",
+sec: "0.7",
+region: "Metropolis"
+},
+30003419: {
+system: "Erstur",
+sec: "0.6",
+region: "Metropolis"
+},
+30003420: {
+system: "Fredagod",
+sec: "0.8",
+region: "Metropolis"
+},
+30003421: {
+system: "Libold",
+sec: "0.6",
+region: "Metropolis"
+},
+30003422: {
+system: "Wirdalen",
+sec: "0.6",
+region: "Metropolis"
+},
+30003423: {
+system: "Nein",
+sec: "0.5",
+region: "Metropolis"
+},
+30003427: {
+system: "Osvestmunnur",
+sec: "0.5",
+region: "Metropolis"
+},
+30003428: {
+system: "Hilfhurmur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003429: {
+system: "Geffur",
+sec: "0.7",
+region: "Metropolis"
+},
+30003430: {
+system: "Oppold",
+sec: "0.7",
+region: "Metropolis"
+},
+30003431: {
+system: "Tratokard",
+sec: "0.6",
+region: "Metropolis"
+},
+30003432: {
+system: "Lumegen",
+sec: "0.6",
+region: "Metropolis"
+},
+30003433: {
+system: "Gedugaud",
+sec: "0.7",
+region: "Metropolis"
+},
+30003434: {
+system: "Polstodur",
+sec: "0.8",
+region: "Metropolis"
+},
+30003435: {
+system: "Hebisa",
+sec: "0.9",
+region: "Metropolis"
+},
+30003436: {
+system: "Tollus",
+sec: "0.8",
+region: "Metropolis"
+},
+30003437: {
+system: "Ogoten",
+sec: "0.7",
+region: "Metropolis"
+},
+30003438: {
+system: "Earled",
+sec: "0.8",
+region: "Metropolis"
+},
+30003439: {
+system: "Aderkan",
+sec: "0.6",
+region: "Metropolis"
+},
+30003440: {
+system: "Ansher",
+sec: "0.9",
+region: "Metropolis"
+},
+30003441: {
+system: "Earwik",
+sec: "0.6",
+region: "Metropolis"
+},
+30003442: {
+system: "Finanar",
+sec: "0.5",
+region: "Metropolis"
+},
+30003443: {
+system: "Moselgi",
+sec: "0.7",
+region: "Metropolis"
+},
+30003445: {
+system: "Iluin",
+sec: "0.7",
+region: "Metropolis"
+},
+30003447: {
+system: "Josekorn",
+sec: "0.6",
+region: "Metropolis"
+},
+30003448: {
+system: "Nifflung",
+sec: "0.8",
+region: "Metropolis"
+},
+30003449: {
+system: "Hakeri",
+sec: "0.7",
+region: "Metropolis"
+},
+30003450: {
+system: "Oraekja",
+sec: "0.7",
+region: "Metropolis"
+},
+30003451: {
+system: "Dantbeinn",
+sec: "0.7",
+region: "Metropolis"
+},
+30003452: {
+system: "Irgrus",
+sec: "0.7",
+region: "Metropolis"
+},
+30003453: {
+system: "Orduin",
+sec: "0.8",
+region: "Metropolis"
+},
+30003454: {
+system: "Engosi",
+sec: "0.8",
+region: "Metropolis"
+},
+30003455: {
+system: "Atonder",
+sec: "0.8",
+region: "Metropolis"
+},
+30003456: {
+system: "Hotrardik",
+sec: "0.7",
+region: "Metropolis"
+},
+30003457: {
+system: "Ridoner",
+sec: "0.7",
+region: "Metropolis"
+},
+30003458: {
+system: "Klaevik",
+sec: "0.6",
+region: "Metropolis"
+},
+30003459: {
+system: "Lirerim",
+sec: "0.6",
+region: "Metropolis"
+},
+30003462: {
+system: "Eldjaerin",
+sec: "0.6",
+region: "Metropolis"
+},
+30003464: {
+system: "Aldik",
+sec: "0.7",
+region: "Metropolis"
+},
+30003468: {
+system: "Hroduko",
+sec: "0.7",
+region: "Metropolis"
+},
+30003469: {
+system: "Hodrold",
+sec: "0.6",
+region: "Metropolis"
+},
+30003472: {
+system: "Erindur",
+sec: "0.6",
+region: "Metropolis"
+},
+30003473: {
+system: "Fahruni",
+sec: "0.5",
+region: "Domain"
+},
+30003482: {
+system: "Mista",
+sec: "0.5",
+region: "Domain"
+},
+30003485: {
+system: "Andabiar",
+sec: "0.6",
+region: "Domain"
+},
+30003487: {
+system: "Arbaz",
+sec: "0.9",
+region: "Domain"
+},
+30003488: {
+system: "Penirgman",
+sec: "0.9",
+region: "Domain"
+},
+30003489: {
+system: "Chaven",
+sec: "1.0",
+region: "Domain"
+},
+30003490: {
+system: "Khopa",
+sec: "0.8",
+region: "Domain"
+},
+30003491: {
+system: "Ashab",
+sec: "0.9",
+region: "Domain"
+},
+30003492: {
+system: "Orkashu",
+sec: "0.8",
+region: "Domain"
+},
+30003493: {
+system: "Youl",
+sec: "0.8",
+region: "Domain"
+},
+30003494: {
+system: "Ekid",
+sec: "0.7",
+region: "Domain"
+},
+30003495: {
+system: "Raravoss",
+sec: "0.6",
+region: "Domain"
+},
+30003496: {
+system: "Nakri",
+sec: "0.8",
+region: "Domain"
+},
+30003497: {
+system: "Zaimeth",
+sec: "0.5",
+region: "Domain"
+},
+30003498: {
+system: "Sharhelund",
+sec: "0.6",
+region: "Domain"
+},
+30003500: {
+system: "Sharji",
+sec: "0.8",
+region: "Domain"
+},
+30003501: {
+system: "Kudi",
+sec: "0.7",
+region: "Domain"
+},
+30003502: {
+system: "Bahromab",
+sec: "0.6",
+region: "Domain"
+},
+30003503: {
+system: "Madirmilire",
+sec: "0.6",
+region: "Domain"
+},
+30003504: {
+system: "Niarja",
+sec: "0.5",
+region: "Domain"
+},
+30003505: {
+system: "Fabum",
+sec: "0.7",
+region: "Domain"
+},
+30003506: {
+system: "Saana",
+sec: "0.6",
+region: "Domain"
+},
+30003507: {
+system: "Teshi",
+sec: "0.9",
+region: "Domain"
+},
+30003508: {
+system: "Sayartchen",
+sec: "0.8",
+region: "Domain"
+},
+30003509: {
+system: "Gosalav",
+sec: "0.7",
+region: "Domain"
+},
+30003510: {
+system: "Sorzielang",
+sec: "0.8",
+region: "Domain"
+},
+30003511: {
+system: "Somouh",
+sec: "0.9",
+region: "Domain"
+},
+30003512: {
+system: "Abaim",
+sec: "0.8",
+region: "Domain"
+},
+30003513: {
+system: "Ides",
+sec: "0.8",
+region: "Domain"
+},
+30003514: {
+system: "Yeeramoun",
+sec: "0.8",
+region: "Domain"
+},
+30003515: {
+system: "Anila",
+sec: "0.7",
+region: "Domain"
+},
+30003516: {
+system: "Pedel",
+sec: "0.7",
+region: "Domain"
+},
+30003517: {
+system: "Etav",
+sec: "0.8",
+region: "Domain"
+},
+30003518: {
+system: "Saheri",
+sec: "0.5",
+region: "Domain"
+},
+30003519: {
+system: "Lahnina",
+sec: "0.7",
+region: "Domain"
+},
+30003520: {
+system: "Mahrokht",
+sec: "0.9",
+region: "Domain"
+},
+30003521: {
+system: "Alkabsi",
+sec: "0.7",
+region: "Domain"
+},
+30003522: {
+system: "Sarum Prime",
+sec: "1.0",
+region: "Domain"
+},
+30003523: {
+system: "Hama",
+sec: "0.8",
+region: "Domain"
+},
+30003524: {
+system: "Irnal",
+sec: "1.0",
+region: "Domain"
+},
+30003525: {
+system: "Bagodan",
+sec: "0.7",
+region: "Domain"
+},
+30003526: {
+system: "Murzi",
+sec: "0.6",
+region: "Domain"
+},
+30003527: {
+system: "Chesoh",
+sec: "0.9",
+region: "Domain"
+},
+30003528: {
+system: "Herila",
+sec: "0.8",
+region: "Domain"
+},
+30003529: {
+system: "Chemilip",
+sec: "0.6",
+region: "Domain"
+},
+30003531: {
+system: "Hisoufad",
+sec: "0.7",
+region: "Domain"
+},
+30003532: {
+system: "Jesoyeh",
+sec: "0.7",
+region: "Domain"
+},
+30003533: {
+system: "Hahda",
+sec: "0.6",
+region: "Domain"
+},
+30003535: {
+system: "Afivad",
+sec: "0.5",
+region: "Domain"
+},
+30003536: {
+system: "Uzigh",
+sec: "0.6",
+region: "Domain"
+},
+30003538: {
+system: "Merz",
+sec: "0.7",
+region: "Domain"
+},
+30003540: {
+system: "Sirkahri",
+sec: "0.5",
+region: "Domain"
+},
+30003545: {
+system: "Yuhelia",
+sec: "0.8",
+region: "Domain"
+},
+30003546: {
+system: "Maiah",
+sec: "0.8",
+region: "Domain"
+},
+30003547: {
+system: "Hamse",
+sec: "0.9",
+region: "Domain"
+},
+30003548: {
+system: "Barira",
+sec: "0.8",
+region: "Domain"
+},
+30003549: {
+system: "Lashkai",
+sec: "0.9",
+region: "Domain"
+},
+30003550: {
+system: "Zhilshinou",
+sec: "0.9",
+region: "Domain"
+},
+30003551: {
+system: "Jaswelu",
+sec: "0.8",
+region: "Domain"
+},
+30003552: {
+system: "Ana",
+sec: "0.9",
+region: "Domain"
+},
+30003553: {
+system: "Warouh",
+sec: "0.5",
+region: "Domain"
+},
+30003554: {
+system: "Jambu",
+sec: "0.5",
+region: "Domain"
+},
+30003558: {
+system: "Madimal",
+sec: "0.7",
+region: "Domain"
+},
+30003574: {
+system: "Boystin",
+sec: "0.5",
+region: "Solitude"
+},
+30003575: {
+system: "Lour",
+sec: "0.6",
+region: "Solitude"
+},
+30003576: {
+system: "Maire",
+sec: "0.7",
+region: "Solitude"
+},
+30003577: {
+system: "Oerse",
+sec: "0.6",
+region: "Solitude"
+},
+30003578: {
+system: "Octanneve",
+sec: "0.7",
+region: "Solitude"
+},
+30003579: {
+system: "Larryn",
+sec: "0.6",
+region: "Solitude"
+},
+30003580: {
+system: "Niballe",
+sec: "0.6",
+region: "Solitude"
+},
+30003581: {
+system: "Postouvin",
+sec: "0.7",
+region: "Solitude"
+},
+30003582: {
+system: "Odinesyn",
+sec: "0.7",
+region: "Solitude"
+},
+30003583: {
+system: "Weraroix",
+sec: "0.6",
+region: "Solitude"
+},
+30003586: {
+system: "Gererique",
+sec: "0.7",
+region: "Solitude"
+},
+30003588: {
+system: "Yvaeroure",
+sec: "0.8",
+region: "Solitude"
+},
+30003589: {
+system: "Vecodie",
+sec: "0.8",
+region: "Solitude"
+},
+30003590: {
+system: "Arasare",
+sec: "0.8",
+region: "Solitude"
+},
+30003591: {
+system: "Yvelet",
+sec: "0.8",
+region: "Solitude"
+},
+30003592: {
+system: "Lazer",
+sec: "0.8",
+region: "Solitude"
+},
+30003593: {
+system: "Stoure",
+sec: "0.7",
+region: "Solitude"
+},
+30003603: {
+system: "Ondree",
+sec: "0.5",
+region: "Solitude"
+},
+30003604: {
+system: "Pochelympe",
+sec: "0.6",
+region: "Solitude"
+},
+30003605: {
+system: "Eggheron",
+sec: "0.5",
+region: "Solitude"
+},
+30003794: {
+system: "Stacmon",
+sec: "0.6",
+region: "Placid"
+},
+30003809: {
+system: "Brellystier",
+sec: "0.5",
+region: "Placid"
+},
+30003810: {
+system: "Vivanier",
+sec: "0.5",
+region: "Placid"
+},
+30003811: {
+system: "Algasienan",
+sec: "0.7",
+region: "Placid"
+},
+30003812: {
+system: "Osmallanais",
+sec: "0.8",
+region: "Placid"
+},
+30003813: {
+system: "Ivorider",
+sec: "0.7",
+region: "Placid"
+},
+30003814: {
+system: "Mollin",
+sec: "0.7",
+region: "Placid"
+},
+30003815: {
+system: "Iffrue",
+sec: "0.7",
+region: "Placid"
+},
+30003816: {
+system: "Vilinnon",
+sec: "0.6",
+region: "Placid"
+},
+30003817: {
+system: "Ommaerrer",
+sec: "0.6",
+region: "Placid"
+},
+30003824: {
+system: "Archavoinet",
+sec: "0.6",
+region: "Placid"
+},
+30003830: {
+system: "Orvolle",
+sec: "0.7",
+region: "Placid"
+},
+30003831: {
+system: "Osmeden",
+sec: "0.7",
+region: "Placid"
+},
+30003832: {
+system: "Adacyne",
+sec: "0.5",
+region: "Placid"
+},
+30003858: {
+system: "Gousoviba",
+sec: "0.9",
+region: "Khanid"
+},
+30003859: {
+system: "Neyi",
+sec: "0.8",
+region: "Khanid"
+},
+30003860: {
+system: "Kihtaled",
+sec: "0.9",
+region: "Khanid"
+},
+30003861: {
+system: "Ipref",
+sec: "0.9",
+region: "Khanid"
+},
+30003862: {
+system: "Agil",
+sec: "0.9",
+region: "Khanid"
+},
+30003863: {
+system: "Khanid Prime",
+sec: "0.9",
+region: "Khanid"
+},
+30003864: {
+system: "Jachanu",
+sec: "0.9",
+region: "Khanid"
+},
+30003865: {
+system: "Sazre",
+sec: "0.8",
+region: "Khanid"
+},
+30003866: {
+system: "Bukah",
+sec: "0.8",
+region: "Khanid"
+},
+30003867: {
+system: "Ervekam",
+sec: "0.7",
+region: "Khanid"
+},
+30003868: {
+system: "Mashtarmem",
+sec: "0.7",
+region: "Khanid"
+},
+30003869: {
+system: "Sehsasez",
+sec: "0.7",
+region: "Khanid"
+},
+30003870: {
+system: "Osis",
+sec: "0.7",
+region: "Khanid"
+},
+30003871: {
+system: "Geztic",
+sec: "0.7",
+region: "Khanid"
+},
+30003872: {
+system: "Yezara",
+sec: "0.7",
+region: "Khanid"
+},
+30003873: {
+system: "Kahah",
+sec: "0.7",
+region: "Khanid"
+},
+30003874: {
+system: "Saloti",
+sec: "0.7",
+region: "Khanid"
+},
+30003875: {
+system: "Hishai",
+sec: "0.8",
+region: "Khanid"
+},
+30003876: {
+system: "Molea",
+sec: "0.7",
+region: "Khanid"
+},
+30003877: {
+system: "Gidali",
+sec: "0.7",
+region: "Khanid"
+},
+30003878: {
+system: "Palas",
+sec: "0.5",
+region: "Khanid"
+},
+30003879: {
+system: "Safshela",
+sec: "0.7",
+region: "Khanid"
+},
+30003880: {
+system: "Reteka",
+sec: "0.5",
+region: "Khanid"
+},
+30003881: {
+system: "Moniyyuku",
+sec: "0.6",
+region: "Khanid"
+},
+30003882: {
+system: "Lansez",
+sec: "0.7",
+region: "Khanid"
+},
+30003883: {
+system: "Keberz",
+sec: "0.5",
+region: "Khanid"
+},
+30003885: {
+system: "Arzanni",
+sec: "0.6",
+region: "Khanid"
+},
+30003888: {
+system: "Badivefi",
+sec: "0.7",
+region: "Khanid"
+},
+30003889: {
+system: "Talidal",
+sec: "0.5",
+region: "Khanid"
+},
+30003890: {
+system: "Ashi",
+sec: "0.7",
+region: "Khanid"
+},
+30003891: {
+system: "Tzashrah",
+sec: "0.5",
+region: "Khanid"
+},
+30003894: {
+system: "Sabusi",
+sec: "0.5",
+region: "Khanid"
+},
+30003903: {
+system: "Afnakat",
+sec: "0.6",
+region: "Khanid"
+},
+30003904: {
+system: "Col",
+sec: "0.5",
+region: "Khanid"
+},
+30003906: {
+system: "Firbha",
+sec: "0.6",
+region: "Khanid"
+},
+30003910: {
+system: "Balanaz",
+sec: "0.6",
+region: "Khanid"
+},
+30003911: {
+system: "Edani",
+sec: "0.6",
+region: "Khanid"
+},
+30003912: {
+system: "Danera",
+sec: "0.6",
+region: "Khanid"
+},
+30003913: {
+system: "Bomana",
+sec: "0.5",
+region: "Khanid"
+},
+30003914: {
+system: "Rahabeda",
+sec: "0.6",
+region: "Khanid"
+},
+30003915: {
+system: "Aurejet",
+sec: "0.5",
+region: "Khanid"
+},
+30004078: {
+system: "Dresi",
+sec: "0.6",
+region: "Kador"
+},
+30004079: {
+system: "Aphend",
+sec: "0.6",
+region: "Kador"
+},
+30004080: {
+system: "Romi",
+sec: "0.7",
+region: "Kador"
+},
+30004081: {
+system: "Zororzih",
+sec: "0.7",
+region: "Kador"
+},
+30004082: {
+system: "Aharalel",
+sec: "0.6",
+region: "Kador"
+},
+30004083: {
+system: "Gensela",
+sec: "0.7",
+region: "Kador"
+},
+30004084: {
+system: "Ghesis",
+sec: "0.5",
+region: "Kador"
+},
+30004085: {
+system: "Gamdis",
+sec: "0.7",
+region: "Kador"
+},
+30004086: {
+system: "Joamma",
+sec: "0.6",
+region: "Kador"
+},
+30004088: {
+system: "Joramok",
+sec: "0.8",
+region: "Kador"
+},
+30004090: {
+system: "Aband",
+sec: "0.5",
+region: "Kador"
+},
+30004091: {
+system: "Uanim",
+sec: "0.6",
+region: "Kador"
+},
+30004092: {
+system: "Murini",
+sec: "0.6",
+region: "Kador"
+},
+30004093: {
+system: "Askonak",
+sec: "0.7",
+region: "Kador"
+},
+30004094: {
+system: "Nordar",
+sec: "0.6",
+region: "Kador"
+},
+30004095: {
+system: "Kador Prime",
+sec: "0.6",
+region: "Kador"
+},
+30004096: {
+system: "Khafis",
+sec: "0.6",
+region: "Kador"
+},
+30004097: {
+system: "Dantan",
+sec: "0.7",
+region: "Kador"
+},
+30004098: {
+system: "Turba",
+sec: "0.7",
+region: "Kador"
+},
+30004099: {
+system: "Sonama",
+sec: "0.8",
+region: "Kador"
+},
+30004100: {
+system: "Halibai",
+sec: "0.7",
+region: "Kador"
+},
+30004101: {
+system: "Suner",
+sec: "0.9",
+region: "Kador"
+},
+30004102: {
+system: "Inis-Ilix",
+sec: "0.9",
+region: "Kador"
+},
+30004103: {
+system: "Kothe",
+sec: "0.6",
+region: "Kador"
+},
+30004111: {
+system: "Yarebap",
+sec: "0.5",
+region: "Kador"
+},
+30004112: {
+system: "Mandoo",
+sec: "0.5",
+region: "Kador"
+},
+30004113: {
+system: "Miah",
+sec: "0.6",
+region: "Kador"
+},
+30004114: {
+system: "Peyiri",
+sec: "0.5",
+region: "Kador"
+},
+30004115: {
+system: "Kamda",
+sec: "0.6",
+region: "Kador"
+},
+30004122: {
+system: "Chanoun",
+sec: "0.5",
+region: "Kador"
+},
+30004124: {
+system: "Aphi",
+sec: "0.5",
+region: "Kador"
+},
+30004125: {
+system: "Jakri",
+sec: "0.5",
+region: "Kador"
+},
+30004126: {
+system: "Nidupad",
+sec: "0.5",
+region: "Kador"
+},
+30004127: {
+system: "Zimse",
+sec: "0.5",
+region: "Kador"
+},
+30004128: {
+system: "Koona",
+sec: "0.5",
+region: "Kador"
+},
+30004130: {
+system: "Hostakoh",
+sec: "0.6",
+region: "Kador"
+},
+30004131: {
+system: "Yooh",
+sec: "0.7",
+region: "Kador"
+},
+30004132: {
+system: "Jeshideh",
+sec: "0.7",
+region: "Kador"
+},
+30004133: {
+system: "Hilmar",
+sec: "0.8",
+region: "Kador"
+},
+30004134: {
+system: "Kasi",
+sec: "0.8",
+region: "Kador"
+},
+30004135: {
+system: "Shura",
+sec: "0.8",
+region: "Kador"
+},
+30004142: {
+system: "Hikansog",
+sec: "0.8",
+region: "Kador"
+},
+30004143: {
+system: "Syrikos",
+sec: "0.9",
+region: "Kador"
+},
+30004144: {
+system: "Yebouz",
+sec: "0.9",
+region: "Kador"
+},
+30004145: {
+system: "Hapala",
+sec: "0.9",
+region: "Kador"
+},
+30004146: {
+system: "Salah",
+sec: "0.8",
+region: "Kador"
+},
+30004147: {
+system: "Akhmoh",
+sec: "0.8",
+region: "Kador"
+},
+30004148: {
+system: "Jennim",
+sec: "0.8",
+region: "Kador"
+},
+30004149: {
+system: "Elmed",
+sec: "0.8",
+region: "Kador"
+},
+30004150: {
+system: "Shaggoth",
+sec: "0.7",
+region: "Kador"
+},
+30004151: {
+system: "Ustnia",
+sec: "0.8",
+region: "Kador"
+},
+30004152: {
+system: "Kooreng",
+sec: "0.7",
+region: "Kador"
+},
+30004153: {
+system: "Minin",
+sec: "0.7",
+region: "Kador"
+},
+30004154: {
+system: "Yehnifi",
+sec: "0.6",
+region: "Kador"
+},
+30004155: {
+system: "Shemah",
+sec: "0.8",
+region: "Kador"
+},
+30004156: {
+system: "Asrios",
+sec: "0.8",
+region: "Kador"
+},
+30004157: {
+system: "Ithar",
+sec: "0.8",
+region: "Kador"
+},
+30004158: {
+system: "Telang",
+sec: "0.8",
+region: "Kador"
+},
+30004159: {
+system: "Lazara",
+sec: "0.8",
+region: "Kador"
+},
+30004160: {
+system: "Zorrabed",
+sec: "0.8",
+region: "Kador"
+},
+30004249: {
+system: "Avada",
+sec: "0.7",
+region: "Aridia"
+},
+30004251: {
+system: "Mishi",
+sec: "0.7",
+region: "Aridia"
+},
+30004253: {
+system: "Pahineh",
+sec: "0.8",
+region: "Aridia"
+},
+30004270: {
+system: "Sazilid",
+sec: "0.5",
+region: "Aridia"
+},
+30004290: {
+system: "Zaveral",
+sec: "0.6",
+region: "Aridia"
+},
+30004967: {
+system: "Luminaire",
+sec: "1.0",
+region: "Essence"
+},
+30004968: {
+system: "Mies",
+sec: "0.9",
+region: "Essence"
+},
+30004969: {
+system: "Oursulaert",
+sec: "0.9",
+region: "Essence"
+},
+30004970: {
+system: "Renyn",
+sec: "0.9",
+region: "Essence"
+},
+30004971: {
+system: "Duripant",
+sec: "1.0",
+region: "Essence"
+},
+30004972: {
+system: "Algogille",
+sec: "0.9",
+region: "Essence"
+},
+30004973: {
+system: "Caslemon",
+sec: "0.6",
+region: "Essence"
+},
+30004974: {
+system: "Jolevier",
+sec: "0.9",
+region: "Essence"
+},
+30004976: {
+system: "Charmerout",
+sec: "0.6",
+region: "Essence"
+},
+30004981: {
+system: "Actee",
+sec: "0.5",
+region: "Essence"
+},
+30004983: {
+system: "Amane",
+sec: "0.6",
+region: "Essence"
+},
+30004987: {
+system: "Deninard",
+sec: "0.7",
+region: "Essence"
+},
+30004989: {
+system: "Annages",
+sec: "0.7",
+region: "Essence"
+},
+30004993: {
+system: "Villore",
+sec: "0.5",
+region: "Essence"
+},
+30004994: {
+system: "Arant",
+sec: "0.6",
+region: "Essence"
+},
+30004995: {
+system: "Allamotte",
+sec: "0.6",
+region: "Essence"
+},
+30005001: {
+system: "Arnon",
+sec: "0.6",
+region: "Essence"
+},
+30005002: {
+system: "Laurvier",
+sec: "0.7",
+region: "Essence"
+},
+30005004: {
+system: "Attyn",
+sec: "0.7",
+region: "Essence"
+},
+30005005: {
+system: "Ignebaener",
+sec: "0.5",
+region: "Essence"
+},
+30005006: {
+system: "Aere",
+sec: "0.6",
+region: "Essence"
+},
+30005011: {
+system: "Droselory",
+sec: "0.5",
+region: "Essence"
+},
+30005013: {
+system: "Perckhevin",
+sec: "0.5",
+region: "Essence"
+},
+30005015: {
+system: "Synchelle",
+sec: "0.9",
+region: "Essence"
+},
+30005016: {
+system: "Wysalan",
+sec: "0.8",
+region: "Essence"
+},
+30005017: {
+system: "Yona",
+sec: "0.8",
+region: "Essence"
+},
+30005018: {
+system: "Noghere",
+sec: "0.7",
+region: "Essence"
+},
+30005019: {
+system: "Aporulie",
+sec: "0.8",
+region: "Essence"
+},
+30005021: {
+system: "Adrel",
+sec: "0.6",
+region: "Essence"
+},
+30005023: {
+system: "Clorteler",
+sec: "0.5",
+region: "Essence"
+},
+30005024: {
+system: "Atlangeins",
+sec: "0.9",
+region: "Essence"
+},
+30005025: {
+system: "Derririntel",
+sec: "0.8",
+region: "Essence"
+},
+30005026: {
+system: "Cat",
+sec: "0.7",
+region: "Essence"
+},
+30005027: {
+system: "Ommare",
+sec: "0.7",
+region: "Essence"
+},
+30005028: {
+system: "Andole",
+sec: "0.8",
+region: "Essence"
+},
+30005029: {
+system: "Vale",
+sec: "0.7",
+region: "Essence"
+},
+30005036: {
+system: "Amdonen",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005037: {
+system: "Mora",
+sec: "0.9",
+region: "Kor-Azor"
+},
+30005038: {
+system: "Kor-Azor Prime",
+sec: "0.9",
+region: "Kor-Azor"
+},
+30005039: {
+system: "Leva",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005040: {
+system: "Nishah",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005041: {
+system: "Masanuh",
+sec: "0.7",
+region: "Kor-Azor"
+},
+30005042: {
+system: "Sehmy",
+sec: "1.0",
+region: "Kor-Azor"
+},
+30005043: {
+system: "Nakregde",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30005044: {
+system: "Danyana",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30005045: {
+system: "Nahyeen",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30005046: {
+system: "Jinkah",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30005047: {
+system: "Nibainkier",
+sec: "0.7",
+region: "Kor-Azor"
+},
+30005048: {
+system: "Polfaly",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30005049: {
+system: "Andrub",
+sec: "0.7",
+region: "Kor-Azor"
+},
+30005050: {
+system: "Kulu",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005051: {
+system: "Choga",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005052: {
+system: "Soumi",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005053: {
+system: "Imih",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005054: {
+system: "Nare",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005055: {
+system: "Zinkon",
+sec: "0.7",
+region: "Kor-Azor"
+},
+30005056: {
+system: "Kizama",
+sec: "0.7",
+region: "Kor-Azor"
+},
+30005057: {
+system: "Shaha",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005058: {
+system: "Neesher",
+sec: "0.5",
+region: "Kor-Azor"
+},
+30005060: {
+system: "Ordion",
+sec: "0.5",
+region: "Kor-Azor"
+},
+30005069: {
+system: "Nahol",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005071: {
+system: "Tralasa",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005075: {
+system: "Latari",
+sec: "0.6",
+region: "Kor-Azor"
+},
+30005192: {
+system: "Shera",
+sec: "0.6",
+region: "Genesis"
+},
+30005193: {
+system: "Lor",
+sec: "0.5",
+region: "Genesis"
+},
+30005198: {
+system: "Pakhshi",
+sec: "0.8",
+region: "Genesis"
+},
+30005199: {
+system: "Tar",
+sec: "0.8",
+region: "Genesis"
+},
+30005200: {
+system: "Tekaima",
+sec: "0.6",
+region: "Genesis"
+},
+30005201: {
+system: "Manarq",
+sec: "0.8",
+region: "Genesis"
+},
+30005202: {
+system: "Emsar",
+sec: "0.7",
+region: "Genesis"
+},
+30005203: {
+system: "Ourapheh",
+sec: "0.9",
+region: "Genesis"
+},
+30005204: {
+system: "Yulai",
+sec: "1.0",
+region: "Genesis"
+},
+30005206: {
+system: "Kemerk",
+sec: "0.8",
+region: "Genesis"
+},
+30005214: {
+system: "Ashokon",
+sec: "0.7",
+region: "Genesis"
+},
+30005215: {
+system: "Avyuh",
+sec: "0.6",
+region: "Genesis"
+},
+30005217: {
+system: "Sheroo",
+sec: "0.6",
+region: "Genesis"
+},
+30005218: {
+system: "Sosh",
+sec: "0.5",
+region: "Genesis"
+},
+30005219: {
+system: "Sigga",
+sec: "0.5",
+region: "Genesis"
+},
+30005220: {
+system: "Keseya",
+sec: "0.6",
+region: "Genesis"
+},
+30005229: {
+system: "Diaderi",
+sec: "0.8",
+region: "Genesis"
+},
+30005230: {
+system: "Manatirid",
+sec: "0.5",
+region: "Genesis"
+},
+30005235: {
+system: "Malma",
+sec: "0.5",
+region: "Genesis"
+},
+30005243: {
+system: "Madomi",
+sec: "0.6",
+region: "Genesis"
+},
+30005244: {
+system: "Gergish",
+sec: "0.6",
+region: "Genesis"
+},
+30005245: {
+system: "Tahli",
+sec: "0.6",
+region: "Genesis"
+},
+30005246: {
+system: "Imya",
+sec: "0.5",
+region: "Genesis"
+},
+30005247: {
+system: "Kobam",
+sec: "0.5",
+region: "Genesis"
+},
+30005249: {
+system: "Anyed",
+sec: "0.6",
+region: "Genesis"
+},
+30005250: {
+system: "Habu",
+sec: "0.6",
+region: "Genesis"
+},
+30005253: {
+system: "Chiga",
+sec: "0.7",
+region: "Genesis"
+},
+30005254: {
+system: "Abhan",
+sec: "0.6",
+region: "Genesis"
+},
+30005269: {
+system: "Simela",
+sec: "0.5",
+region: "Genesis"
+},
+30005288: {
+system: "Girani-Fa",
+sec: "0.6",
+region: "Genesis"
+},
+30005289: {
+system: "Nasreri",
+sec: "0.5",
+region: "Genesis"
+},
+30005290: {
+system: "Heorah",
+sec: "0.5",
+region: "Genesis"
+},
+30005292: {
+system: "Agal",
+sec: "0.5",
+region: "Genesis"
+},
+30005293: {
+system: "Doza",
+sec: "0.6",
+region: "Genesis"
+},
+30005301: {
+system: "Tourier",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005302: {
+system: "Alenia",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005303: {
+system: "Merolles",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005304: {
+system: "Alentene",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005305: {
+system: "Cistuvaert",
+sec: "1.0",
+region: "Verge Vendor"
+},
+30005306: {
+system: "Vaere",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005307: {
+system: "Aidart",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005308: {
+system: "Jufvitte",
+sec: "0.5",
+region: "Verge Vendor"
+},
+30005309: {
+system: "Ansalle",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005310: {
+system: "Scheenins",
+sec: "0.5",
+region: "Verge Vendor"
+},
+30005311: {
+system: "Amygnon",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005312: {
+system: "Gisleres",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005313: {
+system: "Ellmay",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005314: {
+system: "Theruesse",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005315: {
+system: "Eletta",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005316: {
+system: "Luse",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30005317: {
+system: "Ekuenbiron",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005318: {
+system: "Vay",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005319: {
+system: "Raneilles",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005322: {
+system: "Scolluzer",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005323: {
+system: "Sortet",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005324: {
+system: "Claulenne",
+sec: "0.7",
+region: "Verge Vendor"
+},
+30005325: {
+system: "Masalle",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005326: {
+system: "Annelle",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005327: {
+system: "Chesiette",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005331: {
+system: "Chantrousse",
+sec: "0.6",
+region: "Verge Vendor"
+},
+30005332: {
+system: "Osmomonne",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30005333: {
+system: "Stou",
+sec: "0.5",
+region: "Verge Vendor"
+},
+30005334: {
+system: "Tierijev",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30010141: {
+system: "Sakenta",
+sec: "1.0",
+region: "The Forge"
+},
+30011392: {
+system: "Jouvulen",
+sec: "0.9",
+region: "Lonetrek"
+},
+30011407: {
+system: "Akiainavas",
+sec: "0.7",
+region: "Lonetrek"
+},
+30011672: {
+system: "Kerepa",
+sec: "1.0",
+region: "Tash-Murkon"
+},
+30012505: {
+system: "Malukker",
+sec: "1.0",
+region: "Heimatar"
+},
+30012547: {
+system: "Hadaugago",
+sec: "0.9",
+region: "Heimatar"
+},
+30012715: {
+system: "Odotte",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30013410: {
+system: "Abrat",
+sec: "1.0",
+region: "Metropolis"
+},
+30013489: {
+system: "Deepari",
+sec: "0.9",
+region: "Domain"
+},
+30014971: {
+system: "Couster",
+sec: "0.9",
+region: "Essence"
+},
+30015042: {
+system: "Akhwa",
+sec: "0.9",
+region: "Kador"
+},
+30015305: {
+system: "Adallier",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30020141: {
+system: "Senda",
+sec: "0.9",
+region: "The Forge"
+},
+30021392: {
+system: "Kappas",
+sec: "0.9",
+region: "Lonetrek"
+},
+30021407: {
+system: "Aokannitoh",
+sec: "1.0",
+region: "The Forge"
+},
+30021672: {
+system: "Pasha",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30022505: {
+system: "Orgron",
+sec: "1.0",
+region: "Metropolis"
+},
+30022547: {
+system: "Krilmokenur",
+sec: "0.9",
+region: "Heimatar"
+},
+30022715: {
+system: "Oirtlair",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30023410: {
+system: "Embod",
+sec: "1.0",
+region: "Metropolis"
+},
+30023489: {
+system: "Fora",
+sec: "0.9",
+region: "Domain"
+},
+30024971: {
+system: "Hecarrin",
+sec: "0.8",
+region: "Essence"
+},
+30025042: {
+system: "Annad",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30025305: {
+system: "Channace",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30030141: {
+system: "Uitra",
+sec: "0.9",
+region: "The Forge"
+},
+30031392: {
+system: "Komo",
+sec: "0.8",
+region: "The Citadel"
+},
+30031407: {
+system: "Hitanishio",
+sec: "0.9",
+region: "Lonetrek"
+},
+30031672: {
+system: "Safilbab",
+sec: "1.0",
+region: "Tash-Murkon"
+},
+30032505: {
+system: "Todeko",
+sec: "1.0",
+region: "Heimatar"
+},
+30032547: {
+system: "Larkugei",
+sec: "0.9",
+region: "Heimatar"
+},
+30032715: {
+system: "Olelon",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30033410: {
+system: "Erego",
+sec: "0.9",
+region: "Metropolis"
+},
+30033489: {
+system: "Hanan",
+sec: "0.9",
+region: "Domain"
+},
+30034971: {
+system: "Henebene",
+sec: "0.8",
+region: "Essence"
+},
+30035042: {
+system: "Chaktaren",
+sec: "0.8",
+region: "Kor-Azor"
+},
+30035305: {
+system: "Clacille",
+sec: "0.9",
+region: "Verge Vendor"
+},
+30040141: {
+system: "Urhinichi",
+sec: "0.8",
+region: "The Citadel"
+},
+30041392: {
+system: "Laah",
+sec: "0.9",
+region: "The Citadel"
+},
+30041407: {
+system: "Ichinumi",
+sec: "0.9",
+region: "Lonetrek"
+},
+30041672: {
+system: "Seitam",
+sec: "0.9",
+region: "Tash-Murkon"
+},
+30042505: {
+system: "Usteli",
+sec: "1.0",
+region: "Heimatar"
+},
+30042547: {
+system: "Loguttur",
+sec: "1.0",
+region: "Heimatar"
+},
+30042715: {
+system: "Trossere",
+sec: "0.9",
+region: "Sinq Laison"
+},
+30043410: {
+system: "Fildar",
+sec: "1.0",
+region: "Metropolis"
+},
+30043489: {
+system: "Horir",
+sec: "0.9",
+region: "Domain"
+},
+30044971: {
+system: "Mesokel",
+sec: "0.9",
+region: "Essence"
+},
+30045042: {
+system: "Conoban",
+sec: "0.9",
+region: "Kor-Azor"
+},
+30045305: {
+system: "Clellinon",
+sec: "0.8",
+region: "Verge Vendor"
+},
+30045322: {
+system: "Samanuni",
+sec: "0.7",
+region: "Black Rise"
+},
+30045323: {
+system: "Astoh",
+sec: "0.6",
+region: "Black Rise"
+},
+30045324: {
+system: "Onnamon",
+sec: "0.6",
+region: "Black Rise"
+},
+30045325: {
+system: "Rohamaa",
+sec: "0.5",
+region: "Black Rise"
+},
+30045327: {
+system: "Tsuruma",
+sec: "0.5",
+region: "Black Rise"
+},
+30045328: {
+system: "Ahtila",
+sec: "0.6",
+region: "Black Rise"
+},
+30045329: {
+system: "Ichoriya",
+sec: "0.6",
+region: "Black Rise"
+}
+};
 var systemToID_hash={
 Tanoo: 30000001,
 Lashesih: 30000002,

@@ -18,6 +18,7 @@ class dynObject {
         }
     }
 }
+
 /* 
  * Database query for solar system info
  */
@@ -66,7 +67,7 @@ function systems_ac($minsec)
 /* 
  * Generates systemName to ID lookup table
  */
-function systemToID($minsec){       
+function systemsByName($minsec){       
     $systems=array();
     $systems_q=systems_q($minsec);    
     foreach ($systems_q as $row) {
@@ -74,8 +75,26 @@ function systemToID($minsec){
         $nodash=str_replace('-', '', $nospace.'');
         $systems[$nodash]=$row['id'];
     }
-    $strip1=str_replace(':"',':',json_encode($systems));
+    return($systems);
+}
+/* 
+ * Generates systemName to ID lookup table
+ */
+function systemsByName_json($minsec){       
+    $strip1=str_replace(':"',':',json_encode(systemsByName($minsec)));
     $strip2=str_replace('",',',',$strip1);
     $strip3=str_replace('"}','}',$strip2);
     return $strip3;//check json parsing rules to make ints
+}
+
+function systemsByID($minsec){    
+    $systems=new dynObject();
+    $systems_q=systems_q($minsec);    
+    foreach ($systems_q as $row) {
+        $systems->$row['id']=new dynObject();
+        $systems->$row['id']->system=$row['system'];
+        $systems->$row['id']->sec=$row['sec'];
+        $systems->$row['id']->region=$row['region'];
+    }
+    return($systems);
 }

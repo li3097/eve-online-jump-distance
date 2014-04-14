@@ -22,7 +22,7 @@ class dynObject {
 /* 
  * Database query for solar system info
  */
-function db_systems($minsec=0.5){
+function db_systems($minsec=null){
     global $dbinfo;
     $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
     $sql="SELECT ss.solarSystemID-30000000 as id, ss.solarSystemName as system, ROUND(ss.security,1) as sec,c.constellationName as constellation, r.regionName as region
@@ -73,6 +73,9 @@ function systems_ac($minsec)
         $system=new dynObject();
         $system->t=$row['system'];
         $row['sec']=round($row['sec'],1);
+        if ($row['sec']==1){
+            $row['sec']='1.0';
+        }
         $system->s=' ('.$row['region']." <span class='s".str_replace('.', '', $row['sec'].'')."'>".$row['sec'].'</span>)';
         $system->i=$row['id'];
         $systems[]=$system;

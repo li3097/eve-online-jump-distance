@@ -4,12 +4,12 @@ function systemToID(system) {
         throw new Error("systemToID(system): system must be a string");
     }
     var s = system.replace(' ', '').replace('-', '');
-    return systemToID_hash[s];
+    return SS_NAME_TO_ID[s];
 }
 function getJumpPath(origin, target, nodes) {
     var resultPath = [];
     if (nodes === undefined) {
-        nodes = jump_path_hisec;
+        nodes = JUMP_NODES_HISEC;
     }
 
     function checkSystemID(system) {

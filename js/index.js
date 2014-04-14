@@ -14,9 +14,9 @@ function renderPath() {
 
     try {
         if ('A3-RQ3'==origin||'A3-RQ3'==target){
-            var path = getJumpPath(origin, target,jump_path_all);            
+            var path = getJumpPath(origin, target,JUMP_NODES_ALL);            
         } else {            
-            var path = getJumpPath(origin, target,jump_path_hisec);
+            var path = getJumpPath(origin, target,JUMP_NODES_HISEC);
         }
         //console.log(path);
         var jumps = path.length - 1;
@@ -94,8 +94,8 @@ $(document).ready(function()
             return item.t;
         }
     };
-    $("#d").autocomplete(systems_ac, systemAutocompleteOpts);
-    $("#s").autocomplete(systems_ac, systemAutocompleteOpts);
+    $("#d").autocomplete(SS_AC, systemAutocompleteOpts);
+    $("#s").autocomplete(SS_AC, systemAutocompleteOpts);
     $("#details").hide();
     $("#showdetails").text("Show details");
     $("#showdetails").click(function() {

@@ -123,9 +123,9 @@ function systems_by_id($minsec){
 
 function generate_evedata_js(){
     $minsec=0.45;
-    return 'var ssInfo='.json_encode(systems_by_id($minsec))
-        .';var systems_ac='.str_replace('<\/span>','</span>',json_encode(systems_ac($minsec)))
-        .';var systemToID_hash='.systems_by_name_json($minsec)
-        .';var jump_path_all='.str_replace('"','',json_encode(jump_nodes(null)))
-        .';var jump_path_hisec='.str_replace('"','',json_encode(jump_nodes($minsec)));
+    return 'var SS_ID_INFO='.json_encode(systems_by_id($minsec))
+        .';var SS_AC='.str_replace('<\/span>','</span>',json_encode(systems_ac($minsec)))
+        .';var SS_NAME_TO_ID='.systems_by_name_json($minsec)
+        .';var JUMP_NODES_ALL='.str_replace('"','',json_encode(jump_nodes(null)))
+        .';var JUMP_NODES_HISEC='.str_replace('"','',json_encode(jump_nodes($minsec)));
 }

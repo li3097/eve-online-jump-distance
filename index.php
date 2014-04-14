@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <title>Under Powered Shrubberies</title>
+        <title>UPS- Courier Contracting</title>
         <link rel="stylesheet" type="text/css" href="css/eve_dark.css">
         <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.autocomplete.pack.js"></script>

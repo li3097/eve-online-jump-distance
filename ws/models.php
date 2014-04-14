@@ -25,7 +25,7 @@ class dynObject {
 function db_systems($minsec=0.5){
     global $dbinfo;
     $dbConnection = new PDO("mysql:dbname={$dbinfo['database']};host={$dbinfo['host']}", $dbinfo['user'], $dbinfo['pass']);
-    $sql="SELECT ss.solarSystemID as id, ss.solarSystemName as system, ROUND(ss.security, 1)  as sec,c.constellationName as constellation, r.regionName as region
+    $sql="SELECT ss.solarSystemID as id, ss.solarSystemName as system, ss.security  as sec,c.constellationName as constellation, r.regionName as region
     FROM evesdd_crucible_11.mapsolarsystems as ss
     JOIN mapconstellations as c ON ss.constellationID = c.constellationID
     JOIN mapregions as r ON ss.regionID = r.regionID";    
@@ -72,6 +72,7 @@ function systems_ac($minsec)
     foreach ($db_systems as $row) {
         $system=new dynObject();
         $system->t=$row['system'];
+        $row['sec']=round($row['sec'],1);
         $system->s=' ('.$row['region']." <span class='s".str_replace('.', '', $row['sec'].'')."'>".$row['sec'].'</span>)';
         $system->i=$row['id'];
         $systems[]=$system;
@@ -82,7 +83,7 @@ function systems_ac($minsec)
 /* 
  * Generates systemName to ID lookup table
  */
-function systemsByName($minsec){       
+function systems_by_name($minsec){       
     $systems=array();
     $db_systems=db_systems($minsec);    
     foreach ($db_systems as $row) {
@@ -95,8 +96,8 @@ function systemsByName($minsec){
 /* 
  * Generates systemName to ID lookup table
  */
-function systemsByName_json($minsec){       
-    $strip1=str_replace(':"',':',json_encode(systemsByName($minsec)));
+function systems_by_name_json($minsec){       
+    $strip1=str_replace(':"',':',json_encode(systems_by_name($minsec)));
     $strip2=str_replace('",',',',$strip1);
     $strip3=str_replace('"}','}',$strip2);
     return $strip3;//check json parsing rules to make ints
@@ -105,7 +106,7 @@ function systemsByName_json($minsec){
 /*
  * Create array of system info
  */
-function systemsByID($minsec){    
+function systems_by_id($minsec){    
     $systems=new dynObject();
     $db_systems=db_systems($minsec);    
     foreach ($db_systems as $row) {
@@ -115,4 +116,13 @@ function systemsByID($minsec){
         $systems->$row['id']->region=$row['region'];
     }
     return($systems);
+}
+
+function generate_evedata_js(){
+    $minsec=0.45;
+    return 'var ssInfo='.json_encode(systems_by_id($minsec))
+        .';var systems_ac='.str_replace('<\/span>','</span>',json_encode(systems_ac($minsec)))
+        .';var systemToID_hash='.systems_by_name_json($minsec)
+        .';var jump_path_all='.str_replace('"','',json_encode(jump_nodes(null)))
+        .';var jump_path_hisec='.str_replace('"','',json_encode(jump_nodes($minsec)));
 }

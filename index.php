@@ -32,6 +32,7 @@
             renderPath = function() {
                 var origin = $('#s').val();
                 var target = $('#d').val();
+                
                 try {
                     var path = getJumpPath(origin, target);
                     //console.log(path);
@@ -42,6 +43,7 @@
                     //console.log(path, link);
                     showFee();
                 } catch (e) {
+                    console.log(e.message,e.stack);
                     document.getElementById('jumps').value = '';
                     document.getElementById('fee').value = '';
                     document.getElementById('quote').innerHTML = '';
@@ -108,8 +110,8 @@
                         return item.t;
                     }
                 };
-                $("#d").autocomplete(systems, systemAutocompleteOpts);
-                $("#s").autocomplete(systems, systemAutocompleteOpts);
+                $("#d").autocomplete(systems_ac, systemAutocompleteOpts);
+                $("#s").autocomplete(systems_ac, systemAutocompleteOpts);
                 $("#details").hide();
                 $("#showdetails").text("Show details");
                 $("#showdetails").click(function() {

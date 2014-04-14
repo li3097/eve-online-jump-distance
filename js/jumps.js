@@ -9,14 +9,14 @@ function systemToID(system) {
 function getJumpPath(origin, target, nodes) {
     var resultPath = [];
     if (nodes === undefined) {
-        nodes = jump_path_all;
+        nodes = jump_path_hisec;
     }
 
     function checkSystemID(system) {
         if (typeof system === 'string') {
             //if a string is entered, translate to the systemID equivalent
             var id = parseInt(systemToID(system));
-            if (typeof id === 'number') {
+            if (id >0) {
                 system = id;
             } else {
                 throw new Error("getJumpPath(): [" + system + "] could not be matched to a systemID");

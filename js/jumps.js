@@ -60,6 +60,7 @@ function getJumpPath(origin, target, nodes) {
             if (maxJumps<1){
                             window.err=[];
                             err['visited']=visitedSystems;
+                            console.log('systems:',visitedSystems.length+'/'+nodes.length);
                             throw new Error("getJumpPath(): exceeded maxjumps pathing from:"+origin+" to:"+target+".");                    
             }
 
@@ -68,7 +69,7 @@ function getJumpPath(origin, target, nodes) {
 
             // Get the IDs of the systems, connected to the current
             var links = nodes[currentSystem];
-
+            //console.log(currentSystem);
             // Enqueue all connected systems
             for (var i = 0; i < links.length; i++) {
                 var neighborSystem = links[i];
@@ -91,6 +92,8 @@ function getJumpPath(origin, target, nodes) {
                             window.err=[];
                             err['visited']=visitedSystems;
                             err['path']=resultPath;
+                            console.log('systems:',visitedSystems.length+'/'+nodes.length);
+                            console.log('path',resultPath);
                             throw new Error("getJumpPath(): path exceeds 100 from:"+origin+" to:"+target+" path:"+resultPath);                            
                         }
                     }

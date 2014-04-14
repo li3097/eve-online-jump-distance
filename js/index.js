@@ -8,11 +8,16 @@ function showFee() {
     document.getElementById('quote').innerHTML = ' (' + fee + ')';
 };
 function renderPath() {
-    var origin = systemToID($('#s').val());
+    var origin = $('#s').val();
     var target = $('#d').val();
+    console.log(origin,target);
 
     try {
-        var path = getJumpPath(origin, target);
+        if ('A3-RQ3'==origin||'A3-RQ3'==target){
+            var path = getJumpPath(origin, target,jump_path_all);            
+        } else {            
+            var path = getJumpPath(origin, target,jump_path_hisec);
+        }
         //console.log(path);
         var jumps = path.length - 1;
         document.getElementById('jumps').value = jumps;
@@ -33,36 +38,11 @@ function renderPath() {
 
 //----------- IGB stuff
 
-IGBrouteLink = function(from, to) {
+function IGBrouteLink(from, to) {
     //return '<a onClick="CCPEVE.clearAllWaypoints();setTimeout(function(){CCPEVE.showRouteTo('+"'"+from+"::"+to+"');},4000);"+'">Show Route</a>';
     return '<a onClick="CCPEVE.showRouteTo(' + "'" + from + "::" + to + "');" + '">Show Route</a>';
 };
 
-//---shims
-if (typeof CCPEVE !== 'undefined') {
-    CCPEVE.requestTrust('http://really.ruok.org');
-    isIGB = true;
-} else {
-    isIGB = false;
-    CCPEVE = {
-        showInfo: function() {
-            var win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
-            win.focus();
-        },
-        joinChannel: function() {
-            alert('please use in game browser to join channel');
-        },
-        createContract: function() {
-            alert('please use in game browser to create contract');
-        },
-        showRouteTo: function() {
-            alert('please use in game browser to show routes');
-        },
-        clearAllWaypoints: function() {
-            alert('please use in game browser to show routes');
-        }
-    };
-}
 function inputFocus(i) {
     if (i.value === i.defaultValue) {
         i.value = "";
@@ -77,6 +57,32 @@ function inputBlur(i) {
 }
 $(document).ready(function()
 {
+    
+    //---shims
+    if (typeof CCPEVE !== 'undefined') {
+        CCPEVE.requestTrust('http://really.ruok.org');
+        isIGB = true;
+    } else {
+        isIGB = false;
+        CCPEVE = {
+            showInfo: function() {
+                var win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
+                win.focus();
+            },
+            joinChannel: function() {
+                alert('please use in game browser to join channel');
+            },
+            createContract: function() {
+                alert('please use in game browser to create contract');
+            },
+            showRouteTo: function() {
+                alert('please use in game browser to show routes');
+            },
+            clearAllWaypoints: function() {
+                alert('please use in game browser to show routes');
+            }
+        };
+    }
     var systemAutocompleteOpts = {
         width: 300,
         formatItem: function(item)

@@ -111,7 +111,7 @@ function getJumpPath(origin, target, nodes) {
                 }
             }
         }
-        console.log(visitedSystems);
+        //console.log(visitedSystems);
         throw new Error("getJumpPath(): no path from:"+origin+" to:"+target);  
     }
 }

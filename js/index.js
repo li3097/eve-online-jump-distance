@@ -1,14 +1,14 @@
-
-getFee = function(jumps) {
+//functions used in index
+function getFee(jumps) {
     return (.5 + (.5 * jumps)) + ' mill ISK';
 };
-showFee = function() {
+function showFee() {
     var fee = getFee(document.getElementById('jumps').value);
     document.getElementById('fee').value = fee;
     document.getElementById('quote').innerHTML = ' (' + fee + ')';
 };
-renderPath = function() {
-    var origin = $('#s').val();
+function renderPath() {
+    var origin = systemToID($('#s').val());
     var target = $('#d').val();
 
     try {

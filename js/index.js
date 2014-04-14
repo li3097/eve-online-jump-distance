@@ -1,11 +1,20 @@
 //functions used in index
 function getFee(jumps) {
-    return (.5 + (.5 * jumps)) + ' mill ISK';
+    if (jumps>0){
+        return (.5 + (.5 * jumps)) + ' mill ISK';
+    } else {
+        return '';
+    }
 };
 function showFee() {
     var fee = getFee(document.getElementById('jumps').value);
-    document.getElementById('fee').value = fee;
-    document.getElementById('quote').innerHTML = ' (' + fee + ')';
+    if (fee.length>0){
+        document.getElementById('fee').value = fee;
+        document.getElementById('quote').innerHTML = ' ( ' + fee + ' )';
+    } else {
+        document.getElementById('fee').value = '';
+        document.getElementById('quote').innerHTML = '';        
+    }
 };
 function renderPath() {
     var origin = $('#s').val();
@@ -21,18 +30,17 @@ function renderPath() {
         //console.log(path);
         var jumps = path.length - 1;
         document.getElementById('jumps').value = jumps;
+        document.getElementById('jumps').style.color = 'white';
         var link = IGBrouteLink(path[0], path[path.length - 1]);
         //document.getElementById('ccproute').innerHTML= link;
         //console.log(path, link);
-        showFee();
     } catch (e) {
         //console.log(e.message, e.stack);
-        document.getElementById('jumps').value = '**No path through Hi-sec**';
-        document.getElementById('fee').value = '';
-        document.getElementById('quote').innerHTML = '';
+        document.getElementById('jumps').value = 'No path through Hi-sec';
+        document.getElementById('jumps').style.color = 'red';
         //document.getElementById('ccproute').innerHTML= '';
     }
-
+    showFee();
 };
 
 
@@ -44,10 +52,16 @@ function IGBrouteLink(from, to) {
 };
 
 function inputFocus(i) {
-    if (i.value === i.defaultValue) {
+    if (i.value === 'No path through Hi-sec') {
         i.value = "";
         i.style.color = "white";
-    }
+    } 
+}
+function clearIfRed(i) {
+    if (i.style.color === 'red') {
+        i.value = "";
+        i.style.color = "white";
+    } 
 }
 function inputBlur(i) {
     if (i.value === "") {
@@ -96,39 +110,16 @@ $(document).ready(function()
     };
     $("#d").autocomplete(SS_AC, systemAutocompleteOpts);
     $("#s").autocomplete(SS_AC, systemAutocompleteOpts);
-    $("#details").hide();
-    $("#showdetails").text("Show details");
-    $("#showdetails").click(function() {
-        $(this).fadeOut('fast', function() {
-            $(this).text($(this).text() === 'Show details' ? 'Hide details' : 'Show details');
-        });
-        $('#details').animate({
-            opacity: 'toggle',
-            height: 'toggle'
-        }, 800, function() {
-            // Animation complete.
-        });
-        $(this).fadeIn('slow');
-        // Save preference in session
-        if ($(this).text() === 'Hide details')
-        {
-            $.ajax({url: 'ajax/prefs.php?prefs=hide'});
-            return false;
-        }
-        if ($(this).text() === 'Show details')
-        {
-            $.ajax({url: 'ajax/prefs.php?prefs=show'});
-            return false;
-        }
-    });
+    
     $("body").delegate('#jumps', 'keyup', function() {
         showFee();
+        $('#d').val('');
     });
     $("body").delegate('#jumps', 'change', function() {
         showFee();
+        $('#d').val('');
     });
-
-
+    
     $("body").delegate('#d', 'change', function() {
         setTimeout(renderPath, 250);
     });

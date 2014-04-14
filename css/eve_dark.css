@@ -1,11 +1,10 @@
 body
 {
   font-family: Arial Narrow, Arial, Helvetica;
-  background-color: black;
+  background-color: #202020;   
   background-repeat:no-repeat;
   background-position: center top;
   color: #DDD;
-  /*font-size: 120%;*/
 }
 a, a:link, a:visited
 {
@@ -19,6 +18,7 @@ input.text, textarea.text, select.text
 {
   background-color: #333;
   color: #DDD;
+  font-weight: bold;
   border: solid 1px #DDD;
 }
 input.button
@@ -27,27 +27,6 @@ input.button
   color: #FFF;
   border: 2px solid #999;
 }
-.contracthistory td, .contracthistory th
-{
-  padding: 0 8px;
-  margin: 0;
-  vertical-align: bottom;
-  border-bottom: solid 1px #666;
-}
-.contracthistory tr.rush
-{
-	background-color: #3E0058;
-}
-.contracthistory tr.rush td
-{
-	border-top: solid 2px #8715B6;
-	border-bottom: solid 2px #8715B6;
-}
-.mediumtable td, .contracthistory th
-{
-  font-size: 90% !important;
-}
-
 .ac_results {
 	padding: 0px;
 	border: 1px solid black;
@@ -79,36 +58,6 @@ input.button
 .ac_over {
 	background-color: #555 !important;
 	color: white;
-}
-#nav 
-{
-  border: solid 1px #777;
-  padding: 4px;
-  width: 140px; 
-  margin-right: 10px;
-  float: left; 
-  margin-top: 20px;
-}
-#nav ul
-{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 20px;
-  padding-left: 0px;
-}
-#nav ul li
-{
-  margin-left: 0px;
-  padding-left: 0px;
-}
-.routeDot
-{
-  width: 5px; 
-  height: 5px;
-  margin-left: 2px;
-  display: inline;
-  float: left;
-  font-size: 1pt;
 }
 .s10 {
   color: #2FEFEF;
@@ -161,6 +110,16 @@ input.button
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+
+.routeDot
+{
+  width: 5px; 
+  height: 5px;
+  margin-left: 2px;
+  display: inline;
+  float: left;
+  font-size: 1pt;
+}
 .n
 {
   background-color: #F0F000; 
@@ -172,21 +131,4 @@ input.button
 .p
 {
   background-color: #D1B310; 
-}
-div.box
-{
-	border: solid 1px #999;
-	padding: 5px 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-}
-span.addwaypoint
-{
-	background-color: #A0A000;
-	margin-left: 5px;
-}
-span.addwaypoint a
-{
-	color: black !important;
 }

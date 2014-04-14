@@ -9,7 +9,7 @@
         <script type="text/javascript" src="js/evedata.js"></script>
         <script type="text/javascript" src="js/jumps.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <style>
+        <style>        
             div.infobox {
                 border: solid white;
                 float: right;
@@ -17,6 +17,9 @@
                 padding: 15px;
             }
             div.infobox h2 {
+            }
+            #quote {
+                font-weight: bold;
             }
         </style>       
 
@@ -61,7 +64,7 @@
 
                 <tr>
                     <td>Jumps</td>
-                    <td><input type="text" name="jumps" id="jumps" class="text" tabindex="1"></td>
+                    <td><input type="text" name="jumps" id="jumps" class="text" onClick="clearIfRed(this);" onSelect="clearIfRed(this);" onFocus="clearIfRed(this);" tabindex="3"></td>
                 </tr>
                 <tr>
                     <td>Fee</td>
@@ -74,7 +77,7 @@
         <ol>
             <li>Use the calculator to get the quote</li>
             <li>Assign the <a onClick="CCPEVE.createContract(3);">courier contract</a>
-                (s) as "private" to <a onclick="CCPEVE.showInfo(2, 98247483);" target="_blank">Under Powered Shrubberies</a> 
+                (s) as "<b>private</b>" to <a onclick="CCPEVE.showInfo(2, 98247483);" target="_blank">Under Powered Shrubberies</a> 
             </li>
             <li>Set reward with the price<span id="quote"></span> from the quote</li>
             <li>Make sure your load is less than 900,000 m3.</li>

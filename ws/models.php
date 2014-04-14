@@ -30,7 +30,7 @@ function db_systems($minsec=0.5){
     JOIN mapconstellations as c ON ss.constellationID = c.constellationID
     JOIN mapregions as r ON ss.regionID = r.regionID";    
     if (!is_null($minsec)){
-        $sql.=" WHERE ss.security > {$minsec} OR ss.solarSystemName = 'A3-RQ3'";
+        $sql.=" WHERE ss.security >= {$minsec} OR ss.solarSystemName = 'A3-RQ3'";
     }        
     return $dbConnection->query($sql);
 }
@@ -43,7 +43,7 @@ function db_jumps($minsec=null){
     $sql="SELECT msj.fromSolarSystemID ,msj.toSolarSystemID#, s1.security as fromSec, s2.security as toSec
     FROM mapsolarsystemjumps as msj
     JOIN mapsolarsystems as s1 on msj.fromSolarSystemID=s1.solarSystemID
-    JOIN mapsolarsystems as s2 on msj.fromSolarSystemID=s2.solarSystemID";    
+    JOIN mapsolarsystems as s2 on msj.toSolarSystemID=s2.solarSystemID";    
     if (!is_null($minsec)){
         $sql.=" WHERE s1.security >= ".(float)$minsec." AND s2.security >= ".(float)$minsec;
     }

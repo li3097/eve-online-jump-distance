@@ -16,6 +16,7 @@ form
 }
 input.text, textarea.text, select.text
 {
+  width:165px;
   background-color: #333;
   color: #DDD;
   font-weight: bold;
@@ -33,7 +34,7 @@ input.button
 	background-color: white;
 	overflow: hidden;
 	z-index: 99999;
-	width: 200px;
+	width: 175px;
 }
 
 .ac_results ul {
@@ -92,6 +93,42 @@ input.button
 .s00 {
   color: red;
 }
+
+
+.d10 {
+  border: 1px solid #FFFFFF;
+  background-color: #2FEFEF;
+}
+.d09 {
+  color: #47EFBF;
+}
+.d08 {
+  color: #00F048;
+}
+.d07 {
+  color: #00EF00;
+}
+.d06 {
+  color: #90F030;
+}
+.d05 {
+  color: #F0F000;
+}
+.d04 {
+  color: red;
+}
+.d03 {
+  color: red;
+}
+.d02 {
+  color: red;
+}
+.d01 {
+  color: red;
+}
+.d00 {
+  color: red;
+}
 .error
 {
   color: #DD0000;
@@ -131,4 +168,22 @@ input.button
 .p
 {
   background-color: #D1B310; 
+}
+
+
+div.infobox {
+    border: solid white;
+    max-width: 330px;
+    float: right;
+    margin: 15px;
+    padding: 15px;
+}
+.nullsec {
+    display: none;
+}
+#quote {
+    font-weight: bold;
+}
+#dest_err {
+    color: red;
 }

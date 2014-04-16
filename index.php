@@ -9,19 +9,6 @@
         <script type="text/javascript" src="js/evedata.js"></script>
         <script type="text/javascript" src="js/jumps.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <style>        
-            div.infobox {
-                border: solid white;
-                float: right;
-                margin: 15px;
-                padding: 15px;
-            }
-            div.infobox h2 {
-            }
-            #quote {
-                font-weight: bold;
-            }
-        </style>       
 
     </head>
     <body>
@@ -36,11 +23,20 @@
                     <li>Jita - Poinen: <i>2 mill isk</i></li>
                 </ul>
                 <b>Long haul available in hi-sec only</b><br>
-                Jump Freighter service <b>now available to A3-RQ3!</b>
-                <h2>Size limitations</h2>
-                Loads are accepted up to 900,000 m3.<br/>
-                For loads up to 100,000 Please break
-                into 2x50,000 <br/> for faster delivery
+                <h2>Size limitations</h2>                
+                <ul>
+                    <li>Loads are accepted up to 900,000 m3.</li>
+                    <li>For loads up to 100,000 Please break
+                into 2x50,000 for faster delivery</li>
+                </ul>
+                
+                <h2>Jump Freighter service</h2>                
+                Jump Freighter service <b>now available to/from A3-RQ3!</b>
+                <ul>
+                    <li>JF Contracts should be made with 7 days expiration and 3 days completion (ie. courier contract default value)</li>
+                    <li>JF Contracts must start at Jita, Poinen, Josameto, Liekuri, Otela or Vasala</li>
+                    <li>For fastest service or alternative Hi-sec destinations we recommend Hauling items to Vasala prior to requesting JF service.</li>
+                </ul>
             </p>
         </div>
 
@@ -53,23 +49,48 @@
         <form>
             <table style="margin-left: 20px;">
                 <tr>
-                    <td>Start System&nbsp;</td>
-                    <td> <input type="text" name="s" id="s" class="text" value="Jita" tabindex="1"> <span style="font-size: 10pt;">(accepts partial solar system names)</span>
+                    <td>Package Location&nbsp;</td>
+                    <td> <input type="text" name="s" id="s" class="text" value="Jita" tabindex="1"> <span style="font-size: 10pt;">(Type to select from auto-complete)</span>
                     </td>
                 </tr>
                 <tr>
-                    <td>Destination&nbsp;</td>
-                    <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"> <span id="ccproute"></span></td>
+                    <td>Ship To&nbsp;</td>
+                    <td><input type="text" name="d" id="d" class="text" value="Josameto" tabindex="2"> <span id="dest_err"></span></td>
                 </tr>
 
                 <tr>
-                    <td>Jumps</td>
-                    <td><input type="text" name="jumps" id="jumps" class="text" onClick="clearIfRed(this);" onSelect="clearIfRed(this);" onFocus="clearIfRed(this);" tabindex="3"></td>
+                    <td>Hi-sec Jumps</td>
+                    <td><input type="text" name="jumps" id="jumps" class="text" onClick="clearIfRed(this);" onSelect="clearIfRed(this);" onFocus="clearIfRed(this);" disabled></td>
+                </tr>
+                
+                
+                <tr>
+                    <td>Haulage</td>
+                    <td><input style="color:white" type="text" id="jumps_fee" class="text" value="" disabled></td>
+                </tr>
+                <tr class="nullsec">
+                    <td colspan="2"><hr></td>
+                </tr>  
+                <tr class="nullsec">
+                    <td>Cargo (Km^3)</td>
+                    <td><input style="color:white" type="text" id="cargo" class="text" value=""></td>
+                </tr>                
+                
+                <tr class="nullsec">
+                    <td>+JF Service</td>
+                    <td><input style="color:white" type="text" id="cargo_fee" class="text" value="" disabled></td>
                 </tr>
                 <tr>
-                    <td>Fee</td>
+                    <td colspan="2"><hr></td>
+                </tr>  
+                <tr>
+                    <td>Contract Reward</td>
                     <td><input style="color:white" type="text" id="fee" class="text" value="" disabled></td>
                 </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>  
+                
             </table>
         </form>
         <hr/>

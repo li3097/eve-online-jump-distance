@@ -1,12 +1,12 @@
 body
 {
   font-family: Arial Narrow, Arial, Helvetica;
-  background-color: #202020;   
+  background-color: #1D1C1C;   
   background-repeat:no-repeat;
   background-position: center top;
   color: #DDD;
 }
-a, a:link, a:visited
+a:link, a:visited
 {
   color: orange;
 }
@@ -180,6 +180,9 @@ div.infobox {
 }
 .nullsec {
     display: none;
+}
+.highlight {
+    color: yellow;
 }
 #quote {
     font-weight: bold;

@@ -1,7 +1,7 @@
 //Global variables
 isJumpFreight=false;
-JFdest={"Jita":true, "Poinen":true, "Josameto":true, "Liekuri":true,"Otela":true,"Vasala":true};
-JFarr=["Jita", "Poinen", "Josameto", "Liekuri","Otela","Vasala"];
+JFdest={"Vasala":true};
+JFarr=["Vasala"];
 //functions used in index
 function showJumpFee() {
     var fee,jumps=document.getElementById('jumps').value;    
@@ -23,15 +23,17 @@ function showFee(){
     if (isJumpFreight){
         var cargoEl=document.getElementById('cargo');
         var cargo=cargoEl.value.replace(/\D/g,'');//strip non-numeric characters
-        cargoEl.value=cargo;
-        var cargoFee=parseFloat(cargo)/10;
-        if (cargo>9000){
-            document.getElementById('cargo_fee').value = 'Cargo over 9,000 Km3';             
+        if (cargoEl.value!==cargo){
+            cargoEl.value=cargo;
+        }
+        var cargoFee=1.5*parseFloat(cargo)/10;
+        if (cargo>324){
+            document.getElementById('cargo_fee').value = 'Cargo over 324,000 m3';             
             document.getElementById('cargo_fee').style.color = 'yellow';
             fee=0;            
         }
         else if (cargo>.1) {
-            cargoFee=Math.ceil(2*cargoFee)/2;
+            cargoFee=cargoFee;
             document.getElementById('cargo_fee').value = cargoFee+' mill ISK';          
             document.getElementById('cargo_fee').style.color = 'white';
             fee+=cargoFee;
@@ -43,11 +45,13 @@ function showFee(){
     }
     
     if (fee>0){
+        document.getElementById('fee_cp').value = fee*1000000;
+        document.getElementById('quote').innerHTML = ' ( ' + fee + ' )';   
         fee +=' mill ISK'; 
-        document.getElementById('fee').value = fee;
-        document.getElementById('quote').innerHTML = ' ( ' + fee + ' )';        
+        document.getElementById('fee').value = fee;     
     } else {
         document.getElementById('fee').value = '';
+        document.getElementById('fee_cp').value = '';
         document.getElementById('quote').innerHTML = '';        
     }
      
@@ -62,7 +66,7 @@ function renderPath() {
     if ('A3-RQ3'===origin){
         //flip a3 to destination
         origin=target;
-        target='A3-RQ3';         
+        target='A3-RQ3';   
     } 
     
     
@@ -74,7 +78,7 @@ function renderPath() {
         
     
         if ('A3-RQ3'===target) {        
-            target='Vasala';
+            target='Friggi';
             if (JFdest[origin]){
                 isJumpFreight=true;        
                 $(".nullsec").show();            
@@ -96,6 +100,7 @@ function renderPath() {
         document.getElementById('jumps').value = '';
         document.getElementById('jumps_fee').value = '';
         document.getElementById('fee').value = '';
+        document.getElementById('fee_cp').value = '';
         document.getElementById('quote').value = '';
         if (e.message=='JF_DEST'){            
                 $('#dest_err').html('JF service only available between '+JFarr+' and A3-RQ3.');

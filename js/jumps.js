@@ -7,7 +7,9 @@ function systemToID(system) {
     return SS_NAME_TO_ID[s];
 }
 function getJumpPath(origin, target, nodes) {
-    var resultPath = [];
+    var path = [];
+    var maxPath = 100;
+    var maxHops = 4000;
     if (nodes === undefined) {
         nodes = JUMP_NODES_HISEC;
     }
@@ -38,80 +40,68 @@ function getJumpPath(origin, target, nodes) {
 
     // Target and origin the same, no distance
     if (origin === target) {
-        resultPath.push(origin);
-        return resultPath;
+        path.push(origin);
+        return path;
     } else if (nodes[origin].indexOf(target)!==-1) {
-        // Target is a neigbour system of origin
-        resultPath.push(origin);
-        resultPath.push(target);
-        return resultPath;
+        // Target is a neigbour of origin
+        path.push(origin);
+        path.push(target);
+        return path;
     } else {
-        // Already visited system
-        var visitedSystems = {};
-        // Limit the number of iterations
-        var maxJumps = 4000;
-        // Systems we can reach from here
-        var withinReach = [];
-        withinReach.push(origin);
-        // Will contain the system IDs         
+        var visited = {}, traverseQ = [];
+        //Enqueues the origin node to be traversed
+        traverseQ.push(origin);     
 
-        while (withinReach.length > 0) {
-            maxJumps--;//timeout at 9k jumps
-            if (maxJumps<1){
+        while (traverseQ.length > 0) {
+            maxHops--;//timeout at 9k jumps
+            if (maxHops<1){
                             window.err=[];
-                            err['visited']=visitedSystems;
-                            console.log('visited:',visitedSystems);
+                            err['visited']=visited;
+                            console.log('visited:',visited);
                             throw new Error("getJumpPath(): exceeded maxjumps pathing from:"+origin+" to:"+target+".");                    
             }
+            // traverse to the node at the front of the queue       
+            var parent = traverseQ.shift();
 
-            // Jump to the first system within reach          
-            var currentSystem = withinReach.shift();
-
-            // Get the IDs of the systems, connected to the current
-            var links = nodes[currentSystem];
-            //console.log(currentSystem);
-            // Enqueue all connected systems
-            for (var i = 0; i < links.length; i++) {
-                var neighborSystem = links[i];
-
-                // If neighbour system is the target,
-                // Build an array of ordered system IDs we need to
-                // visit to get from the origin system to the
-                // target system
-                if (neighborSystem === target) {
-                    //build path by traversing jump parents
-                    resultPath.push(neighborSystem);
-                    resultPath.push(currentSystem);
-                    var len=0;
-                    while (visitedSystems[currentSystem] !== origin) {
-                        currentSystem = visitedSystems[currentSystem];
-                        resultPath.push(currentSystem);
-                        len++;
-                        if (len > 100) {
-                            
+            // Enqueue all connected nodes
+            var children = nodes[parent];
+            for (var i = 0; i < children.length; i++) {
+                //check each child node until the destination is found.
+                var child = children[i];
+                if (child === target) {
+                    // If a child node is the target, build a the shortest path
+                    // back to the origin by traversing parents of visited nodes.
+                    path.push(child); //Start with the child (target)
+                    path.push(parent); //Add the current (parent) node.
+                    //follow the chain of parent pointers until the origin is found.
+                    while (visited[parent] !== origin) {
+                        parent = visited[parent];
+                        path.push(parent);
+                        maxPath--;
+                        if (maxPath < 1) {                            
                             window.err=[];
-                            err['visited']=visitedSystems;
-                            err['path']=resultPath;
-                            console.log('visited:',visitedSystems);
-                            console.log('path:',resultPath);
-                            throw new Error("getJumpPath(): path exceeds 100 from:"+origin+" to:"+target+" path:"+resultPath);                            
+                            err['visited']=visited;
+                            err['path']=path;
+                            console.log('visited:',visited);
+                            console.log('path:',path);
+                            throw new Error("getJumpPath(): path exceeds 100 from:"+origin+" to:"+target+" path:"+path);                            
                         }
                     }
-                    resultPath.push(origin);
-                    resultPath.reverse();
-                    return resultPath;
+                    path.push(origin); //Add in the original origin
+                    path.reverse();// flip target->origin other way around.
+                    return path;
                 }
-
-                // Otherwise, store the current - neighbour
-                // Connection in the visited systems and add the
-                // neighbour to the systems within reach
-                if (visitedSystems[neighborSystem] === undefined) {
-                    visitedSystems[neighborSystem] = currentSystem;
-                    withinReach.push(neighborSystem);
+                
+                //store the current node in the visited object with a reference 
+                //to the parent (which can be traversed later to find the 
+                //shortest path to the origin once the target is found
+                if (visited[child] === undefined) {
+                    visited[child] = parent;
+                    traverseQ.push(child); //Enqueue the child for traversal
                 }
             }
         }
-        //console.log(visitedSystems);
+        //console.log(visited);
         throw new Error("getJumpPath(): no path from:"+origin+" to:"+target);  
     }
 }

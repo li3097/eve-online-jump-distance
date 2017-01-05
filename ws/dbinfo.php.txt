@@ -1,0 +1,7 @@
+<?php
+$dbinfo=array(
+    'database'=>'evesdd_crucible_11',
+    'user'=>'root',
+    'pass'=>'XXXXXXXX',
+    'host'=>'localhost',
+);

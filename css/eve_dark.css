@@ -6,7 +6,7 @@ body
   background-position: center top;
   color: #DDD;
 }
-a:link, a:visited
+a
 {
   color: orange;
 }

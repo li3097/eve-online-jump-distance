@@ -32,10 +32,9 @@
                 <ul>
                     <li>Max JF load is 324,000 m3 per contract.</li>
                     <li>Cost is 125 ISK / m3</li>
-                    <li>JF contracts must be between Vasala IV - Nurtura Food Packaging and A3-RQ3</li>
+                    <li>JF contracts must be between <a onclick="CCPEVE.setDestination(30000190)">Vasala IV - Nurtura Food Packaging</a> and A3-RQ3</li>
                     <li>JF Contracts should be made with 3 days expiration and 3 days completion (ie. courier contract default value).</li>
                     <li>No assembled containers in the contracts, please</li>
-
                 </ul>
             </p>
         </div>
@@ -119,6 +118,6 @@
             <li><a onClick="CCPEVE.joinChannel('RvB Ganked')">RvB Ganked - Come and gank null-sec'ers! (no membership required)<a/></li>
         </ul>
         
-        <p style="float:right; color:white; font-size: 10px">Developed by <a href="http://au.linkedin.com/in/nathanstephendunn/">Nathan Dunn</a></p>
+        <p style="float:right; color:white; font-size: 10px">Developed by <a href="http://www.linkedin.com/in/nathansdunn/">Nathan Dunn</a></p>
     </body>
 </html>

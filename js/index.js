@@ -78,7 +78,7 @@ function renderPath() {
         
     
         if ('A3-RQ3'===target) {        
-            target='Friggi';
+            target='Vasala';
             if (JFdest[origin]){
                 isJumpFreight=true;        
                 $(".nullsec").show();            

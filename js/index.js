@@ -4,7 +4,7 @@ JFdest={"Vasala":true};
 JFarr=["Vasala"];
 //functions used in index
 function showJumpFee() {
-    var fee,jumps=document.getElementById('jumps').value;    
+    let fee,jumps=document.getElementById('jumps').value;    
     if (jumps==0){
         fee=0;
     } else {
@@ -18,15 +18,15 @@ function showJumpFee() {
     return fee;
 }
 function showFee(){
-    var fee=showJumpFee();
+    let fee=showJumpFee();
     
     if (isJumpFreight){
-        var cargoEl=document.getElementById('cargo');
-        var cargo=cargoEl.value.replace(/\D/g,'');//strip non-numeric characters
+        let cargoEl=document.getElementById('cargo');
+        let cargo=cargoEl.value.replace(/\D/g,'');//strip non-numeric characters
         if (cargoEl.value!==cargo){
             cargoEl.value=cargo;
         }
-        var cargoFee=1.5*parseFloat(cargo)/10;
+        let cargoFee=1.5*parseFloat(cargo)/10;
         if (cargo>324){
             document.getElementById('cargo_fee').value = 'Cargo over 324,000 m3';             
             document.getElementById('cargo_fee').style.color = 'yellow';
@@ -57,8 +57,8 @@ function showFee(){
      
 };
 function renderPath() {
-    var origin = $('#s').val();
-    var target = $('#d').val();
+    let origin = $('#s').val();
+    let target = $('#d').val();
     //console.log(origin,target);
     
     //calculate jumps to intermediate system
@@ -87,12 +87,12 @@ function renderPath() {
             }
         }
         
-        var path = getJumpPath(origin, target,JUMP_NODES_HISEC);
+        let path = getJumpPath(origin, target,JUMP_NODES_HISEC);
         //console.log(path);
-        var jumps = path.length - 1;
+        let jumps = path.length - 1;
         document.getElementById('jumps').value = jumps;
         document.getElementById('jumps').style.color = 'white';
-        var link = IGBrouteLink(path[0], path[path.length - 1]);
+        let link = IGBrouteLink(path[0], path[path.length - 1]);
         //document.getElementById('ccproute').innerHTML= link;
         //console.log(path, link);        
         showFee();
@@ -149,7 +149,7 @@ $(document).ready(function()
         isIGB = false;
         CCPEVE = {
             showInfo: function() {
-                var win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
+                let win = window.open('http://rvbeve.com/forums/index.php/topic/6363-hauling-service-ups-now-available/#entry98505', '_blank');
                 win.focus();
             },
             joinChannel: function() {
